@@ -30,18 +30,24 @@ Data scientists interest in data set. for ML, RL, or learning training and dat f
 
  1. Not familiar with aerodynamic concept. 
  2. Intermediate to advance programming skill 
- 
+
  Desire from data: 
 
  1. Pre-processed data 
  2. data could be fed in standard package for training 
- 
+
 ## No. 4 Graduate students 
 Desperate grad students looking for real experiemntal data set
- 
+
  1. Basic understanding aerodynamic concept
  2. Basic programming skill 
 
 Desire from data: 
 
  1. All of the above
+
+# Function Design(Use Cases)
+
++ Data scientist would like to download our datasets which are public accessible
++ A graduate student would like to get some ideas from this model to get his homework done
++ The author would like to make this repo open source and published along with journal paper
