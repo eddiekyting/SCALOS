@@ -7,7 +7,6 @@ The project are by Kuang-Ying"Eddie" Ting, Xiaohai"Bob" Hu, and Yiju Hu
 
 ## Folder Structure
 ```
-.
 SCALOS/
 ├── Project
 │   ├── CSE583 Project Proposal.pptx
