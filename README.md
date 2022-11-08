@@ -4,6 +4,10 @@ This is a proejct for CSE 583 at UW but will eventually be puslished for public 
 The project are by Kuang-Ying"Eddie" Ting, Xiaohai"Bob" Hu, and Yiju Hu
 
 
+
+## Folder Structure
+```
+.
 SCALOS/
 ├── Project
 │   ├── CSE583 Project Proposal.pptx
@@ -29,3 +33,5 @@ SCALOS/
 │       ├── Autosort Run Log 2326.xls
 │       └── Autosort Run Log 2331.xlsx
 └── README.md
+```
+
