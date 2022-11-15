@@ -15,43 +15,44 @@ This project aims to analyze the experimental wind tunnel data for design space 
 
 ## Project Structure 
 The data structure of this project 
-.
-├── README.md
-└── project
-    ├── CSE583 Project Proposal.pptx
-    ├── data
-    │   ├── finaldata_uw2298.csv
-    │   ├── finaldata_uw2320.csv
-    │   ├── finaldata_uw2326.csv
-    │   └── finaldata_uw2331.csv
-    ├── doc
-    │   └── Design.md
-    ├── ref
-    │   ├── 6.2022-1800.pdf
-    │   └── 6.2022-1803.pdf
-    ├── runlogs
-    │   ├── Autosort Run Log 2298.xlsx
-    │   ├── Autosort Run Log 2320.xlsx
-    │   ├── Autosort Run Log 2326.xlsx
-    │   └── Autosort Run Log 2331.xlsx
-    ├── sandbox
-    │   └── Extract_data.ipynb
-    ├── src
-    │   └── __init__.py
-    └── tests
-        └── __init__.py
+
+    .
+    ├── README.md
+    └── project
+        ├── CSE583 Project Proposal.pptx
+        ├── data
+        │   ├── finaldata_uw2298.csv
+        │   ├── finaldata_uw2320.csv
+        │   ├── finaldata_uw2326.csv
+        │   └── finaldata_uw2331.csv
+        ├── doc
+        │   └── Design.md
+        ├── ref
+        │   ├── 6.2022-1800.pdf
+        │   └── 6.2022-1803.pdf
+        ├── runlogs
+        │   ├── Autosort Run Log 2298.xlsx
+        │   ├── Autosort Run Log 2320.xlsx
+        │   ├── Autosort Run Log 2326.xlsx
+        │   └── Autosort Run Log 2331.xlsx
+        ├── sandbox
+        │   └── Extract_data.ipynb
+        ├── src
+        │   └── __init__.py
+        └── tests
+            └── __init__.py
 
 ## Run log and Data 
 There are several entries for the KWT. Each entries contains a run log and a data set. Run log contains detailed information on the run corresponding to the data file which contains data points. The detailed inforamtion on the run log and data are described in subsection. 
 
-Year   Month  Entry    Run   Data Collection 
-2020   Jul    uw2292   152   Force, moment, and flow visualziation 
-2020   Aug    uw2295    23   Force and moment
-2020   Sep    uw2298   133   Force and moment
-2021   Jun    uw2320   148   Force and moment
-2021   Aug    uw2324    54   Flow visualziation 
-2021   Sep    uw2326   255   Force and moment
-2021   Nov    uw2331   150   Force, moment, and flow visualziation
+    Year   Month  Entry    Run   Data Collection 
+    2020   Jul    uw2292   152   Force, moment, and flow visualziation 
+    2020   Aug    uw2295    23   Force and moment
+    2020   Sep    uw2298   133   Force and moment
+    2021   Jun    uw2320   148   Force and moment
+    2021   Aug    uw2324    54   Flow visualziation 
+    2021   Sep    uw2326   255   Force and moment
+    2021   Nov    uw2331   150   Force, moment, and flow visualziation
 
 ### Run log 
     Each 
