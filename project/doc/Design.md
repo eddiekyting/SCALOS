@@ -46,8 +46,10 @@ Desire from data:
 
  1. All of the above
 
-# Function Design(Use Cases)
+# Use cases
 
-+ Data scientist would like to download our datasets which are public accessible
-+ A graduate student would like to get some ideas from this model to get his homework done
-+ The author would like to make this repo open source and published along with journal paper
++ Download dataset for their research
++ Ulitize the model
++ Check the quality of the dataset
++ Use the tool to process their data
++ Cite plots for presentation
