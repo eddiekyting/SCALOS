@@ -42,6 +42,20 @@ The data structure of this project
         └── tests
             └── __init__.py
 
+## Installation
+[1] Install the latest version of Anaconda for your system from [here](https://docs.anaconda.com/anaconda/install/). Please make sure to **install the Python 3.9 version**. The dependencies should also work for other Python versions. Project aim to support Linux and MacOS, so make sure you have access to a machine with either of these operating systems.
+
+[2] Execute the following steps to setup the repository and install the required dependencies.
+```
+conda create -n iclo-autumn-2022 python=3.9
+git clone 
+cd SCALOS
+conda env update -n scalos -f environment.yml
+conda activate scalos
+```
+[3] Now head over to SCALOS directory
+
+
 ## Run log and Data 
 There are several entries for the KWT. Each entries contains a run log and a data set. Run log contains detailed information on the run corresponding to the data file which contains data points. The detailed inforamtion on the run log and data are described in subsection. 
 
