@@ -48,7 +48,7 @@ The data structure of this project
 [2] Execute the following steps to setup the repository and install the required dependencies.
 ```
 conda create -n iclo-autumn-2022 python=3.9
-git clone 
+git clone https://github.com/eddiekyting/SCALOS.git
 cd SCALOS
 conda env update -n scalos -f environment.yml
 conda activate scalos
