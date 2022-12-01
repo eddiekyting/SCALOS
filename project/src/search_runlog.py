@@ -1,3 +1,9 @@
+"""
+This module first does some data processing(change the configurations
+from strings to lists, get the unique configurations) to speed up
+the following search. Then it can search among all the runlogs and
+collect those with the specific configurations that the user needs.
+"""
 import pandas as pd
 
 # Pre-process
@@ -10,7 +16,6 @@ for cf in config:
 df_runlog["CONFIGURATION_SIMPLE"] = config_list
 # get the unique configurations
 config_unique_str = list(set(config_list))
-n_of_config = len(config_unique_str)
 config_unique = [c.split("+") for c in config_unique_str]
 # for each configuration, get the corresponding run numbers
 run_numbers = []
@@ -31,5 +36,9 @@ def search_configuration(input):
             cf_position = config_unique.index(cf)
             output_config.append(config_unique_str[cf_position])
             run_num.append(run_numbers[cf_position])
-    print(output_config)
-    return run_num
+    test_list = []
+    run_num_list = []
+    for run_n in run_num:
+        test_list.append(run_n["TEST"].tolist()[0])
+        run_num_list.append(run_n["RUN NO."].tolist())
+    return test_list, run_num_list
