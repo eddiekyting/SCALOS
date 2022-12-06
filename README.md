@@ -4,9 +4,6 @@ This is a class project for CSE 583 at UW but will eventually be puslished for p
 The goal of the project is to take the standard corrected Kirsten Wind Tunnel data for post process and data visualizatoin 
 The project are by Kuang-Ying"Eddie" Ting, Xiaohai"Bob" Hu, and Yiju Hu. 
 
-## Acknowledgement 
-Support by NASA, Award/Contract \#80NSSC19K1661, under the Commercial Supersonic Technology (CST) program, Supersonic Configurations at Low Speeds, with Sarah Langston as the NASA technical grant monitor is gratefully acknowledged. The authors would like to thank Peter Coen, Lori Ozoroski, Sriram Rallabhandi, Melissa Carter, and Sarah Langston from NASA for the opportunity to conduct this needed research for supersonic aircraft. The authors would also like to thank the staff and crew of the University of Washington’s Kirsten Wind Tunnel (KWT), the 2020-2022 UW senior capstone design project teams, Anwar Moustafa and Colton Hill from class 2021, and Josh Ignacio from class 2022 for their assistance and contributions.
-
 ## Project Background 
 Supersonic airliners/SSBJs are optimized at cruise speed and often neglect low-speed impact at takeoff,  approach, and landing. The goal of the SCALOS proejct is to study on how the shapes and configurations affect the aircraft’s aerodynamics, handling qualities, dynamic, stability and control. 
 
@@ -107,3 +104,7 @@ There are several entries for the KWT. Each entries contains a run log and a dat
     17. SA:             Stability axis, number after axis specified the center of gravity location on percentage of the mean aerodynamic chord
     18. BA:             Body axis, number after axis specified the center of gravity location on percentage of the mean aerodynamic chord
     19. LOD:            Lift over drag, Nondimensional lift coeffeicetint divided by nondimensional drag coeffeicetint. 
+
+
+## Acknowledgement 
+Support by NASA, Award/Contract \#80NSSC19K1661, under the Commercial Supersonic Technology (CST) program, Supersonic Configurations at Low Speeds, with Sarah Langston as the NASA technical grant monitor is gratefully acknowledged. The authors would like to thank Peter Coen, Lori Ozoroski, Sriram Rallabhandi, Melissa Carter, and Sarah Langston from NASA for the opportunity to conduct this needed research for supersonic aircraft. The authors would also like to thank the staff and crew of the University of Washington’s Kirsten Wind Tunnel (KWT), the 2020-2022 UW senior capstone design project teams, Anwar Moustafa and Colton Hill from class 2021, and Josh Ignacio from class 2022 for their assistance and contributions.
