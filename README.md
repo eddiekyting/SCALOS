@@ -1,7 +1,7 @@
 # SCALOS
 
 This is a class project for CSE 583 at UW but will eventually be puslished for public use. 
-The goal of the project is to take the standard corrected Kirsten Wind Tunnel data for post process and data visualizatoin 
+The goal of the project is to take the standard corrected Kirsten Wind Tunnel data for post process and data visualizatoin. 
 The project are by Kuang-Ying"Eddie" Ting, Xiaohai"Bob" Hu, and Yiju Hu. 
 
 ## Project Background 
