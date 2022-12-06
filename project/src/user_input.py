@@ -28,7 +28,7 @@ def start():
             ValueError("Try Again")
             continue
         if len(cfs) == 1 and cfs[0] == "QUIT":
-            print("Thank you for using the software, Goodbye!")
+            print("Thank you for using the tool. Goodbye!")
             stop = True
         else:
             test_list, run_num_list = search_runlog.search_configuration(cfs)
