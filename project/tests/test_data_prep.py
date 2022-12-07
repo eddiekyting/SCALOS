@@ -19,7 +19,7 @@ class TestDataPrep(unittest.TestCase):
         """
         initialization of data input
         """
-        # import data log
+       # import data log
         self.df_log2298 = pd.read_excel(r'~/SCALOS/project/runlogs/Autosort Run Log 2298.xlsx')
         self.df_log2320 = pd.read_excel(r'~/SCALOS/project/runlogs/Autosort Run Log 2320.xlsx')
         self.df_log2326 = pd.read_excel(r'~/SCALOS/project/runlogs/Autosort Run Log 2326.xlsx')
@@ -36,6 +36,7 @@ class TestDataPrep(unittest.TestCase):
 
         check if the test run through
         """
+ 
         DataPrep.runlog_cleanup(self)
 
     def test_data_cleanup_smoke(self):
