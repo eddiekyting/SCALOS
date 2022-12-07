@@ -5,6 +5,30 @@ import matplotlib.pyplot as plt
 
 class DataPlot:
     
+    def __init__(self, plot_type, plot_vars, df_log_sub, df_data_sub, test, runnum):
+        """
+        function:
+            initialization of variables
+
+        parameters:
+            arg df_log:  Data log from data_prep output (data frame)
+
+            arg df_data: Data set from data_prep output (data frame)
+
+            arg test:    Test entries (list)
+
+            arg run_num: Run numbers correspondign to test entires (list)
+
+        return:
+            self
+        """
+        self.plot_type = plot_type
+        self.plot_var = plot_var
+        self.df_log = df_log
+        self.df_data = df_data
+        self.test = test
+        self.run_num = run_num
+    
     def plt_data(plot_type, plot_vars, df_log_sub, df_data_sub, test, runnum):
         if pd.unique(df_log_sub[df_log.columns.tolist()[4]]) == 'P6':
             alphabeta = df_data_sub.columns.tolist()[3]
