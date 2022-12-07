@@ -28,6 +28,33 @@ class DataPrep:
 
         check data sets and concatinate them into single data set
     """
+    def __init__(self):
+        """
+        function:
+            initialization of variables
+
+        parameters:
+            arg df_log:  Data log from data_prep output (data frame)
+
+            arg df_data: Data set from data_prep output (data frame)
+
+            arg test:    Test entries (list)
+
+            arg run_num: Run numbers correspondign to test entires (list)
+
+        return:
+            data logs and sets
+        """
+        # import data log
+        self.df_log2298 = pd.read_excel(r'~/SCALOS/project/runlogs/Autosort Run Log 2298.xlsx')
+        self.df_log2320 = pd.read_excel(r'~/SCALOS/project/runlogs/Autosort Run Log 2320.xlsx')
+        self.df_log2326 = pd.read_excel(r'~/SCALOS/project/runlogs/Autosort Run Log 2326.xlsx')
+        self.df_log2331 = pd.read_excel(r'~/SCALOS/project/runlogs/Autosort Run Log 2331.xlsx')
+        # import data sets
+        self.df_data2298 = pd.read_csv(r'~/SCALOS/project/data/finaldata_uw2298.csv')
+        self.df_data2320 = pd.read_csv(r'~/SCALOS/project/data/finaldata_uw2320.csv')
+        self.df_data2326 = pd.read_csv(r'~/SCALOS/project/data/finaldata_uw2326.csv')
+        self.df_data2331 = pd.read_csv(r'~/SCALOS/project/data/finaldata_uw2331.csv')
 
 
     def runlog_cleanup(self):
@@ -43,12 +70,10 @@ class DataPrep:
 
             df_logXXXX: Clean up individual data logs
         """
-
-        # import data log
-        df_log2298 = pd.read_excel(r'~/SCALOS/project/runlogs/Autosort Run Log 2298.xlsx')
-        df_log2320 = pd.read_excel(r'~/SCALOS/project/runlogs/Autosort Run Log 2320.xlsx')
-        df_log2326 = pd.read_excel(r'~/SCALOS/project/runlogs/Autosort Run Log 2326.xlsx')
-        df_log2331 = pd.read_excel(r'~/SCALOS/project/runlogs/Autosort Run Log 2331.xlsx')
+        df_log2298 = self.df_log2298
+        df_log2320 = self.df_log2320
+        df_log2326 = self.df_log2326
+        df_log2331 = self.df_log2331
     # clean up uw2298
         # delete unncessary column
         del df_log2298["Riley's Stress Level"]
@@ -121,11 +146,10 @@ class DataPrep:
         return:
             df_set:     Concatinate data sets from inputs
         """
-        # import data sets
-        df_data2298 = pd.read_csv(r'~/SCALOS/project/data/finaldata_uw2298.csv')
-        df_data2320 = pd.read_csv(r'~/SCALOS/project/data/finaldata_uw2320.csv')
-        df_data2326 = pd.read_csv(r'~/SCALOS/project/data/finaldata_uw2326.csv')
-        df_data2331 = pd.read_csv(r'~/SCALOS/project/data/finaldata_uw2331.csv')
+        df_data2298 = self.df_data2298
+        df_data2320 = self.df_data2320
+        df_data2326 = self.df_data2326
+        df_data2331 = self.df_data2331
 
         if df_data2298.columns.tolist() !=  df_data2320.columns.tolist():
             raise ValueError("Either 2298 or 2320 data is not right!")

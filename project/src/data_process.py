@@ -118,14 +118,14 @@ class DataProcess:
                 ])):
                     raise ValueError("Test num and corresponding run num is weight tare")
 
-                #
+                # Concatinate sub data log
                 df_log_sub = pd.concat(
                     [df_log_sub,
                      df_log[
                         (df_log[df_log.columns.tolist()[1]] == test[i]) &
                         (df_log[df_log.columns.tolist()[0]] == run_num[i][j]
                         )]], ignore_index=True, axis=0)
-
+                # Concatinate sub data set
                 df_data_sub = pd.concat(
                     [df_data_sub,
                      df_data[(df_data[df_data.columns.tolist()[1]] == test[i]) &
@@ -166,6 +166,7 @@ class DataProcess:
         test = self.test
         run_num = self.run_num
 
+        # Check run type
         if pd.unique(df_log[df_log.columns.tolist()[4]]) == 'P6':
             alphabeta = df_data.columns.tolist()[3]
         elif pd.unique(df_log[df_log.columns.tolist()[4]]) == 'Y6':
@@ -176,6 +177,7 @@ class DataProcess:
         max_list =[]
         min_list =[]
 
+        # find the max and min among all runs
         for i in range(len(test)):
             for j in range(len(run_num[i])):
                 max_list.append(np.max(
@@ -188,9 +190,10 @@ class DataProcess:
                         (df_data[df_data.columns.tolist()[1]] == test[i]) &
                         (df_data[df_data.columns.tolist()[0]] == run_num[i][j])
                     ]))
-
+        # interpolate alpha or beta from min to max
         alphabeta_interp= np.arange(np.ceil(np.max(min_list)), np.floor(np.min(max_list))+1, 1)
 
+        # Check interp data not extrapolate
         if np.min(alphabeta_interp) != np.ceil(np.max(min_list)) or np.max(
             alphabeta_interp) != np.floor(np.min(max_list)):
             raise ValueError("Data range incorrect")
@@ -198,11 +201,13 @@ class DataProcess:
         df_data_interp = pd.DataFrame()
         df_data_derivative = pd.DataFrame()
 
+        # Loop through tests and run numbers
         for i in range(len(test)):
             temp_interp = pd.DataFrame()
             temp_derivative = pd.DataFrame()
             for k in range(len(run_num[i])):
                 for j in range(len(df_data.columns.tolist())):
+                    # Variables do not need to be interpreted
                     if j <= 8:
                         if df_data.columns.tolist()[j] == alphabeta:
                             temp_interp[df_data.columns.tolist()[j]] = alphabeta_interp
@@ -238,10 +243,12 @@ class DataProcess:
                         temp_derivative[df_data.columns.tolist()[j]] = np.gradient(
                             temp_fun(alphabeta_interp), alphabeta_interp)
 
+                # Concatinate data interpolation
                 df_data_interp = pd.concat(
                     [df_data_interp, temp_interp]
                     , ignore_index = True, axis = 0)
 
+                # Concatinate data derivatives
                 df_data_derivative = pd.concat(
                     [df_data_derivative, temp_derivative]
                     , ignore_index = True, axis = 0)
