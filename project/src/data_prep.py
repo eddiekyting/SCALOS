@@ -133,7 +133,7 @@ class DataPrep:
                             df_log2331],
                            ignore_index=True,axis=0)
 
-        return df_log, df_log2298, df_log2320, df_log2326, df_log2331
+        return df_log
 
     def data_cleanup(self):
         """
