@@ -1,4 +1,4 @@
-# <img src= "doc/picture/UW-S-20D_silhouette_top.png" height="60"></img> SCALOS
+# <img src= "project/doc/picture/UW-S-20D_silhouette_top.png" height="60"></img> SCALOS
 
 This is a class project for CSE 583 at UW but will eventually be puslished for public use. 
 The goal of the project is to take the standard corrected Kirsten Wind Tunnel data for post process and data visualizatoin. 
