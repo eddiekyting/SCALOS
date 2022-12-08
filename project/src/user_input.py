@@ -1,4 +1,4 @@
-import search_runlog
+import runlog_search
 def start():
     """
     Interact with users through command-line interface. Our target
@@ -11,7 +11,7 @@ def start():
     while not stop:
         print()
         print(" *** Please enter the configurations you need *** ")
-        print(" *** Enter 'QUIT' to  *** ")
+        print(" *** Enter 'QUIT' to quit the tool *** ")
         print()
         response = ""
         print("> Enter: ", end='')
@@ -31,8 +31,8 @@ def start():
             print("Thank you for using the tool. Goodbye!")
             stop = True
         else:
-            test_list, run_num_list = search_runlog.search_configuration(cfs)
+            test_list, run_num_list = runlog_search.search_configuration(cfs)
             print(test_list, run_num_list)
 
-#if __name__ == "__main__":
-#    start()
+if __name__ == "__main__":
+    start()

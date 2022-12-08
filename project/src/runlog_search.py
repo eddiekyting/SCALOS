@@ -29,6 +29,8 @@ def search_configuration(input):
     :param input: User input, the configuration they interested in, a list
     :return: the run numbers we need, a list
     """
+    if input == []:
+        raise ValueError("The input is null!")
     output_config = []
     run_num = []
     for cf in config_unique:
