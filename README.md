@@ -14,17 +14,30 @@ Methods of active control of such configuration, using a variety of control surf
 
 ## Project Ojective 
 This project aims to analyze the experimental wind tunnel data for design space and trade-off study of supersonic airliner/ business jet at low speeds. 
-The goal of the class project is to extract the commercial wind tunnel standard corrected data for look-up/search, process, and visualization. 
-The package incldues the following capabilities.
+The goal of this class project is to extract the commercial wind tunnel standard corrected data for look-up/search, process, and visualization. 
+The future direction for this repository includes custom wind tunnel data corrections, model regressions, data reduction, and dynamic data augmentation. 
+
+
+### Package Capabilities
+The package incldues the following capabilities. 
 
     1. Search/Look up
-    2. Data process 
+    2. Data Process 
         i. Data alignment 
         ii. Data truncation 
         iii. Data interpolation
         iv. Data derivatives 
     3. Data visulization 
+    
+### Search / Lookup 
+This function allows user to input and look up configurations in the run logs and return test entires and run numbers correspoding to the inputs. 
 
+### Data Process 
+The data process clean up the data for alignment, trucntion and intperolation. This function allows two different set of data with different length and with respect to different location to be manipulated for data process, i.e., subtraction, addition, derivatives, etc. 
+The derivative function computes the data derivaties with respect to longitudinal or lateral direction. 
+
+### Visualization 
+The visulization allows user to visual the data and compare different set of data. 
 
 ## Repository Structure 
 The data structure of this project 
@@ -73,6 +86,7 @@ conda env update -n scalos -f environment.yml
 conda activate scalos
 ```
 [3] Now head over to SCALOS directory
+
 
 
 ## Run log and Data 
