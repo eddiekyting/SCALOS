@@ -34,9 +34,10 @@ This function allows user to input and look up configurations in the run logs an
 
 The name convetion is 
     
-    For-body fuselage + Aft-body fuselage + Outboad wing + Nacelle + Vertical tail + Horizontal tail + Canard 
+    F + A + W + N + V + H + C
 
-With desgination below 
+where F is forebody fuselage; A is aft-body fuselage; W is outboard wing; N is nacelle; V is vertical tail; H is horizontal tail; and lastly, C is carnad. 
+The modulated wind tunnel model components are tabualted below. 
     
             Designation     Description
             F15             2015 forward body
