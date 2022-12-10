@@ -1,15 +1,30 @@
-# <img src= "doc/picture/UW-S-20D_silhouette_top.png" height="60"></img> SCALOS
+# <img src= "doc/picture/UW-S-20D_silhouette_top.png" height="60"></img> Supersonic Configuration At Low Speeds (SCALOS)
 
 This is a class project for CSE 583 at UW but will eventually be puslished for public use. 
 The goal of the project is to take the standard corrected Kirsten Wind Tunnel data for post process and data visualizatoin. 
 This project is by Kuang-Ying"Eddie" Ting, Xiaohai"Bob" Hu, and Yiju Hu. 
 
 ## Project Background 
-Supersonic airliners/SSBJs are optimized at cruise speed and often neglect low-speed impact at takeoff,  approach, and landing. The goal of the SCALOS proejct is to study on how the shapes and configurations affect the aircraft’s aerodynamics, handling qualities, dynamic, stability and control. 
-
-This project aims to analyze the experimental wind tunnel data for design space and trade-off study of supersonic airliner/ business jet at low speeds. The goal of the class project is to extract the commercial wind tunnel standard corrected data for look-up, search, process, and visualization. 
+Most of the supersonic commercial aircraft designs investigated to date have been optimized at cruise conditions and the designs often neglect the low-speed impact on their takeoff, approach, and landing characteristics. 
+The goal of the SCALOS proejct is to study on how the shapes and configurations of long-range commercial supersonic aircraft affect the handling qualities, dynamic, stability, and control at low speeds. 
+Such configuration can become quite nonlinear aerodynamically at relatively low angles of attack. 
+In the design of such aircraft it is important to investigate this nonlinear behavior from a flight safety perspective. 
+Numerous wind tunnel tests and CFD simulations have been used to date and more are planned. 
+Methods of active control of such configuration, using a variety of control surfaces, canards, and engine control techniques, are being developed and evaluated. 
 
 ## Project Ojective 
+This project aims to analyze the experimental wind tunnel data for design space and trade-off study of supersonic airliner/ business jet at low speeds. 
+The goal of the class project is to extract the commercial wind tunnel standard corrected data for look-up/search, process, and visualization. 
+The package incldues the following capabilities.
+
+    1. Search/Look up
+    2. Data process 
+        i. Data alignment 
+        ii. Data truncation 
+        iii. Data interpolation
+        iv. Data derivatives 
+    3. Data visulization 
+
 
 ## Repository Structure 
 The data structure of this project 
@@ -40,7 +55,11 @@ The data structure of this project
         └── tests
             └── __init__.py
 
-
+The ''' data ''' and ''' runlogs''' directory includes experimental run logs and data sets from the KWT data (more data will be uploaded). 
+The data here is standard KWT corrected data without any custom corrections. 
+The ''' ref ''' directory contains all the published literatures related to SCALOS's work at the University of Washington. 
+The ''' src ''' directory has modules of ''' search ''', ''' data_prep ''', ''' data_process ''', and ''' data_plot ''' with corresponding unittests in '''tests''' folder.  
+The ''' examples ''' folder provides examples in Jupyter notebooks for new users. 
 
 ## Installation
 [1] Install the latest version of Anaconda for your system from [here](https://docs.anaconda.com/anaconda/install/). Please make sure to **install the Python 3.9 version**. The dependencies should also work for other Python versions. Project aim to support Linux and MacOS, so make sure you have access to a machine with either of these operating systems.
