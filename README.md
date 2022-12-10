@@ -36,6 +36,7 @@ The name convetion is
     
     For-body fuselage + Aft-body fuselage + Outboad wing + Nacelle + Vertical tail + Horizontal tail + Canard 
     
+    '''math 
     \begin{table}[htb!]
     \centering
     \caption{SCALOS model component designations}
@@ -129,6 +130,7 @@ The name convetion is
         }
     \end{subtable} 
 \end{table}
+    '''
     
 ### Data Process 
 The data process clean up the data for alignment, trucntion and intperolation. This function allows two different set of data with different length and with respect to different location to be manipulated for data process, i.e., subtraction, addition, derivatives, etc. 
