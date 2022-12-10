@@ -35,102 +35,43 @@ This function allows user to input and look up configurations in the run logs an
 The name convetion is 
     
     For-body fuselage + Aft-body fuselage + Outboad wing + Nacelle + Vertical tail + Horizontal tail + Canard 
+
+With desgination below 
     
-    '''math 
-    \begin{table}[htb!]
-    \centering
-    \caption{SCALOS model component designations}
-    \label{tab:SCALOS_part-name}
-        \begin{subtable}{.49\linewidth}
-            \centering
-            \footnotesize{
-            \begin{tabular}{|l||l|}
-            \hline
-            Designation  & Description  \\
-            \hline
-            \hline
-            F15 & 2015 forward body  \\
-            \hline
-            F15.L & 2015 forward body extended version \\ 
-            \hline
-            A15 & \makecell[l]{2015 afterward body \\ (low-mount only) }   \\ 
-            \hline
-            A20 & \makecell[l]{2020 afterward body \\ (Mid- and T-tail capability) }   \\ 
-            \hline
-            W15 & 2015 outboard wing \\ 
-            \hline
-            W17 & 2017 outboard wing \\ 
-            \hline
-            W20 & 2020 outboard wing \\ 
-            \hline
-            W20.OG & 2020 outboard wing with OGEE leading edge\\  
-            \hline
-            W20.ALT & 2020 outboard wing with alternate leading edge \\
-            \hline
-            LE XX & \makecell[l]{XX$^\circ$ simple hing LE deflection \\(delta crank preserved) }  \\
-            \hline
-            N20.B & 2020 bottom mounted nacelles \\
-            \hline
-            N20.T & 2020 top mounted nacelles\\
-            \hline
-            NSRD &  \makecell[l]{Nozzle shock-reflecting deck \\(top-mount only) }  \\
-            \hline
-            V15 & 2015 vertical tail \\
-            \hline
-            V20 & 2020 vertical tail  \\
-            \hline
-            VF1 & Ventral fin \\
-            \hline
-            \end{tabular}
-            }
-        \end{subtable}%
-        \begin{subtable}{.49\linewidth}
-            \centering
-            \footnotesize{
-            \begin{tabular}{|l||l|}
-            \hline
-             Designation   & Description\\
-            \hline
-            \hline
-            DF1 & Dorsal fin \\
-            \hline
-            H15 & \makecell[l]{2015 horizontal stabilizer\\ (low-mount only) } \\ 
-            \hline
-            H15.A & \makecell[l]{2015 RUAV horizontal stabilizer\\ (low-mount only) } \\ 
-            \hline
-            H20.L & 2020 low mounted horizontal stabilizer \\ 
-            \hline
-            H20.M & 2020 cruciform horizontal stabilizer \\ 
-            \hline
-            H20.T & 2020 top mounted horizontal stabilizer \\  
-            \hline
-            C15.F & 2015 forward positioned canard\\
-            \hline
-            C15.M & 2015 mid positioned canard\\
-            \hline
-            C15.A & 2015 afterward positioned canard\\
-            \hline
-            C18.F & 2018 forward positioned canard\\
-            \hline
-            C18.M & 2018 mid positioned canard\\
-            \hline
-            C18.A & 2018 afterward positioned canard\\
-            \hline
-            A.U & Aileron spoilers (roll-control speed brakes) \\
-            \hline
-            SSD &  Spoiler-slot deflector\\
-            \hline
-            FS & Mid-chord spoilers\\
-            \hline
-            CS & Clam shell speed brakes\\
-            \hline
-            FTDXD & \makecell[l]{ Forward trip dots\\ (10 inch behind nose trip ring)}    \\
-            \hline
-            \end{tabular}
-            }
-        \end{subtable} 
-    \end{table}
-    '''
+            Designation     Description
+            F15             2015 forward body
+            F15.L           2015 forward body extended version 
+            A15             2015 afterward body (low-mount only) 
+            A20             2020 afterward body (Mid- and T-tail capability)  
+            W15             2015 outboard wing 
+            W17             2017 outboard wing 
+            W20             2020 outboard wing  
+            W20.OG          2020 outboard wing with OGEE leading edge
+            W20.ALT         2020 outboard wing with alternate leading edge
+            LEXX            XX$^\circ$ simple hing LE deflection (delta crank preserved) 
+            N20.B           2020 bottom mounted nacelles
+            N20.T           2020 top mounted nacelles
+            V15             2015 vertical tail 
+            V20             2020 vertical tail  
+            VF1             Ventral fin
+            DF1             Dorsal fin 
+            H15             2015 horizontal stabilizer (low-mount only)
+            H15.A           2015 RUAV horizontal stabilizer (low-mount only) 
+            H20.L           2020 low mounted horizontal stabilizer 
+            H20.M           2020 cruciform horizontal stabilizer 
+            H20.T           2020 top mounted horizontal stabilizer 
+            C15.F           2015 forward positioned canard
+            C15.M           2015 mid positioned canard
+            C15.A           2015 afterward positioned canard
+            C18.F           2018 forward positioned canard
+            C18.M           2018 mid positioned canard
+            C18.A           2018 afterward positioned canard
+            A.U             Aileron spoilers (roll-control speed brakes) 
+            SSD             Spoiler-slot deflector
+            FS              Mid-chord spoilers
+            CS              Clam shell speed brakes
+            FTDXD           Forward trip dots (10 inch behind nose trip ring) 
+
     
 ### Data Process 
 The data process clean up the data for alignment, trucntion and intperolation. This function allows two different set of data with different length and with respect to different location to be manipulated for data process, i.e., subtraction, addition, derivatives, etc. 
