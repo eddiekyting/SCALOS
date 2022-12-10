@@ -2,15 +2,16 @@
 
 This is a class project for CSE 583 at UW but will eventually be puslished for public use. 
 The goal of the project is to take the standard corrected Kirsten Wind Tunnel data for post process and data visualizatoin. 
-The project are by Kuang-Ying"Eddie" Ting, Xiaohai"Bob" Hu, and Yiju Hu. 
+This project is by Kuang-Ying"Eddie" Ting, Xiaohai"Bob" Hu, and Yiju Hu. 
 
 ## Project Background 
 Supersonic airliners/SSBJs are optimized at cruise speed and often neglect low-speed impact at takeoff,  approach, and landing. The goal of the SCALOS proejct is to study on how the shapes and configurations affect the aircraft’s aerodynamics, handling qualities, dynamic, stability and control. 
 
 This project aims to analyze the experimental wind tunnel data for design space and trade-off study of supersonic airliner/ business jet at low speeds. The goal of the class project is to extract the commercial wind tunnel standard corrected data for look-up, search, process, and visualization. 
 
+## Project Ojective 
 
-## Project Structure 
+## Repository Structure 
 The data structure of this project 
 
     .
@@ -38,6 +39,8 @@ The data structure of this project
         │   └── __init__.py
         └── tests
             └── __init__.py
+
+
 
 ## Installation
 [1] Install the latest version of Anaconda for your system from [here](https://docs.anaconda.com/anaconda/install/). Please make sure to **install the Python 3.9 version**. The dependencies should also work for other Python versions. Project aim to support Linux and MacOS, so make sure you have access to a machine with either of these operating systems.
@@ -108,3 +111,5 @@ There are several entries for the KWT. Each entries contains a run log and a dat
 
 ## Acknowledgement 
 Support by NASA, Award/Contract \#80NSSC19K1661, under the Commercial Supersonic Technology (CST) program, Supersonic Configurations at Low Speeds, with Sarah Langston as the NASA technical grant monitor is gratefully acknowledged. The authors would like to thank Peter Coen, Lori Ozoroski, Sriram Rallabhandi, Melissa Carter, and Sarah Langston from NASA for the opportunity to conduct this needed research for supersonic aircraft. The authors would also like to thank the staff and crew of the University of Washington’s Kirsten Wind Tunnel (KWT), the 2020-2022 UW senior capstone design project teams, Anwar Moustafa and Colton Hill from class 2021, and Josh Ignacio from class 2022 for their assistance and contributions.
+
+The authors would also like to thank Dr. David Beck and Erin Wilson from University of Washington for their support, guidance, and feedback in the development of this package.
