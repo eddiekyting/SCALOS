@@ -39,39 +39,39 @@ The name convetion is
 where F is forebody fuselage; A is aft-body fuselage; W is outboard wing; N is nacelle; V is vertical tail; H is horizontal tail; and lastly, C is carnad. 
 The modulated wind tunnel model components are tabualted below. 
     
-            Designation     Description
-            F15             2015 forward body
-            F15.L           2015 forward body extended version 
-            A15             2015 afterward body (low-mount only) 
-            A20             2020 afterward body (Mid- and T-tail capability)  
-            W15             2015 outboard wing 
-            W17             2017 outboard wing 
-            W20             2020 outboard wing  
-            W20.OG          2020 outboard wing with OGEE leading edge
-            W20.ALT         2020 outboard wing with alternate leading edge
-            LEXX            XX$^\circ$ simple hing LE deflection (delta crank preserved) 
-            N20.B           2020 bottom mounted nacelles
-            N20.T           2020 top mounted nacelles
-            V15             2015 vertical tail 
-            V20             2020 vertical tail  
-            VF1             Ventral fin
-            DF1             Dorsal fin 
-            H15             2015 horizontal stabilizer (low-mount only)
-            H15.A           2015 RUAV horizontal stabilizer (low-mount only) 
-            H20.L           2020 low mounted horizontal stabilizer 
-            H20.M           2020 cruciform horizontal stabilizer 
-            H20.T           2020 top mounted horizontal stabilizer 
-            C15.F           2015 forward positioned canard
-            C15.M           2015 mid positioned canard
-            C15.A           2015 afterward positioned canard
-            C18.F           2018 forward positioned canard
-            C18.M           2018 mid positioned canard
-            C18.A           2018 afterward positioned canard
-            A.U             Aileron spoilers (roll-control speed brakes) 
-            SSD             Spoiler-slot deflector
-            FS              Mid-chord spoilers
-            CS              Clam shell speed brakes
-            FTDXD           Forward trip dots (10 inch behind nose trip ring) 
+    Designation     Description
+    F15             2015 forward body
+    F15.L           2015 forward body extended version 
+    A15             2015 afterward body (low-mount only) 
+    A20             2020 afterward body (Mid- and T-tail capability)  
+    W15             2015 outboard wing 
+    W17             2017 outboard wing 
+    W20             2020 outboard wing  
+    W20.OG          2020 outboard wing with OGEE leading edge
+    W20.ALT         2020 outboard wing with alternate leading edge
+    LEXX            XX$^\circ$ simple hing LE deflection (delta crank preserved) 
+    N20.B           2020 bottom mounted nacelles
+    N20.T           2020 top mounted nacelles
+    V15             2015 vertical tail 
+    V20             2020 vertical tail  
+    VF1             Ventral fin
+    DF1             Dorsal fin 
+    H15             2015 horizontal stabilizer (low-mount only)
+    H15.A           2015 RUAV horizontal stabilizer (low-mount only) 
+    H20.L           2020 low mounted horizontal stabilizer 
+    H20.M           2020 cruciform horizontal stabilizer 
+    H20.T           2020 top mounted horizontal stabilizer 
+    C15.F           2015 forward positioned canard
+    C15.M           2015 mid positioned canard
+    C15.A           2015 afterward positioned canard
+    C18.F           2018 forward positioned canard
+    C18.M           2018 mid positioned canard
+    C18.A           2018 afterward positioned canard
+    A.U             Aileron spoilers (roll-control speed brakes) 
+    SSD             Spoiler-slot deflector
+    FS              Mid-chord spoilers
+    CS              Clam shell speed brakes
+    FTDXD           Forward trip dots (10 inch behind nose trip ring) 
 
     
 ### Data Process 
