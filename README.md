@@ -1,16 +1,87 @@
-# <img src= "project/doc/picture/UW-S-20D_silhouette_top.png" height="60"></img> SCALOS
+# <img src= "doc/picture/UW-S-20D_silhouette_top.png" height="60"></img> Supersonic Configuration At Low Speeds (SCALOS)
 
 This is a class project for CSE 583 at UW but will eventually be puslished for public use. 
 The goal of the project is to take the standard corrected Kirsten Wind Tunnel data for post process and data visualizatoin. 
-The project are by Kuang-Ying"Eddie" Ting, Xiaohai"Bob" Hu, and Yiju Hu. 
+This project is by Kuang-Ying"Eddie" Ting, Xiaohai"Bob" Hu, and Yiju Hu. 
 
 ## Project Background 
-Supersonic airliners/SSBJs are optimized at cruise speed and often neglect low-speed impact at takeoff,  approach, and landing. The goal of the SCALOS proejct is to study on how the shapes and configurations affect the aircraft’s aerodynamics, handling qualities, dynamic, stability and control. 
+Most of the supersonic commercial aircraft designs investigated to date have been optimized at cruise conditions and the designs often neglect the low-speed impact on their takeoff, approach, and landing characteristics. 
+The goal of the SCALOS proejct is to study on how the shapes and configurations of long-range commercial supersonic aircraft affect the handling qualities, dynamic, stability, and control at low speeds. 
+Such configuration can become quite nonlinear aerodynamically at relatively low angles of attack. 
+In the design of such aircraft it is important to investigate this nonlinear behavior from a flight safety perspective. 
+Numerous wind tunnel tests and CFD simulations have been used to date and more are planned. 
+Methods of active control of such configuration, using a variety of control surfaces, canards, and engine control techniques, are being developed and evaluated. 
 
-This project aims to analyze the experimental wind tunnel data for design space and trade-off study of supersonic airliner/ business jet at low speeds. The goal of the class project is to extract the commercial wind tunnel standard corrected data for look-up, search, process, and visualization. 
+## Project Ojective 
+This project aims to analyze the experimental wind tunnel data for design space and trade-off study of supersonic airliner/ business jet at low speeds. 
+The goal of this class project is to extract the commercial wind tunnel standard corrected data for look-up/search, process, and visualization. 
+The future direction for this repository includes custom wind tunnel data corrections, model regressions, data reduction, and dynamic data augmentation. 
 
 
-## Project Structure 
+### Package Capabilities
+The package incldues the following capabilities. 
+
+    1. Search/Look up
+    2. Data Process 
+        i. Data alignment 
+        ii. Data truncation 
+        iii. Data interpolation
+        iv. Data derivatives 
+    3. Data visulization 
+    
+### Search / Lookup 
+This function allows user to input and look up configurations in the run logs and return test entires and run numbers correspoding to the inputs. 
+
+The name convetion is 
+    
+    F + A + W + N + V + H + C
+
+where F is forebody fuselage; A is aft-body fuselage; W is outboard wing; N is nacelle; V is vertical tail; H is horizontal tail; and lastly, C is carnad. 
+The modulated wind tunnel model components are tabualted below. 
+    
+    Designation     Description
+    F15             2015 forward body
+    F15.L           2015 forward body extended version 
+    A15             2015 afterward body (low-mount only) 
+    A20             2020 afterward body (Mid- and T-tail capability)  
+    W15             2015 outboard wing 
+    W17             2017 outboard wing 
+    W20             2020 outboard wing  
+    W20.OG          2020 outboard wing with OGEE leading edge
+    W20.ALT         2020 outboard wing with alternate leading edge
+    LEXX            XX$^\circ$ simple hing LE deflection (delta crank preserved) 
+    N20.B           2020 bottom mounted nacelles
+    N20.T           2020 top mounted nacelles
+    V15             2015 vertical tail 
+    V20             2020 vertical tail  
+    VF1             Ventral fin
+    DF1             Dorsal fin 
+    H15             2015 horizontal stabilizer (low-mount only)
+    H15.A           2015 RUAV horizontal stabilizer (low-mount only) 
+    H20.L           2020 low mounted horizontal stabilizer 
+    H20.M           2020 cruciform horizontal stabilizer 
+    H20.T           2020 top mounted horizontal stabilizer 
+    C15.F           2015 forward positioned canard
+    C15.M           2015 mid positioned canard
+    C15.A           2015 afterward positioned canard
+    C18.F           2018 forward positioned canard
+    C18.M           2018 mid positioned canard
+    C18.A           2018 afterward positioned canard
+    A.U             Aileron spoilers (roll-control speed brakes) 
+    SSD             Spoiler-slot deflector
+    FS              Mid-chord spoilers
+    CS              Clam shell speed brakes
+    FTDXD           Forward trip dots (10 inch behind nose trip ring) 
+
+    
+### Data Process 
+The data process clean up the data for alignment, trucntion and intperolation. This function allows two different set of data with different length and with respect to different location to be manipulated for data process, i.e., subtraction, addition, derivatives, etc. 
+The derivative function computes the data derivaties with respect to longitudinal or lateral direction. 
+
+### Visualization 
+The visulization allows user to visual the data and compare different set of data. 
+
+## Repository Structure 
 The data structure of this project 
 
     .
@@ -39,6 +110,12 @@ The data structure of this project
         └── tests
             └── __init__.py
 
+The ''' data ''' and ''' runlogs''' directory includes experimental run logs and data sets from the KWT data (more data will be uploaded). 
+The data here is standard KWT corrected data without any custom corrections. 
+The ''' ref ''' directory contains all the published literatures related to SCALOS's work at the University of Washington. 
+The ''' src ''' directory has modules of ''' search ''', ''' data_prep ''', ''' data_process ''', and ''' data_plot ''' with corresponding unittests in '''tests''' folder.  
+The ''' examples ''' folder provides examples in Jupyter notebooks for new users. 
+
 ## Installation
 [1] Install the latest version of Anaconda for your system from [here](https://docs.anaconda.com/anaconda/install/). Please make sure to **install the Python 3.9 version**. The dependencies should also work for other Python versions. Project aim to support Linux and MacOS, so make sure you have access to a machine with either of these operating systems.
 
@@ -51,6 +128,7 @@ conda env update -n scalos -f environment.yml
 conda activate scalos
 ```
 [3] Now head over to SCALOS directory
+
 
 
 ## Run log and Data 
@@ -108,3 +186,5 @@ There are several entries for the KWT. Each entries contains a run log and a dat
 
 ## Acknowledgement 
 Support by NASA, Award/Contract \#80NSSC19K1661, under the Commercial Supersonic Technology (CST) program, Supersonic Configurations at Low Speeds, with Sarah Langston as the NASA technical grant monitor is gratefully acknowledged. The authors would like to thank Peter Coen, Lori Ozoroski, Sriram Rallabhandi, Melissa Carter, and Sarah Langston from NASA for the opportunity to conduct this needed research for supersonic aircraft. The authors would also like to thank the staff and crew of the University of Washington’s Kirsten Wind Tunnel (KWT), the 2020-2022 UW senior capstone design project teams, Anwar Moustafa and Colton Hill from class 2021, and Josh Ignacio from class 2022 for their assistance and contributions.
+
+The authors would also like to thank Dr. David Beck and Erin Wilson from University of Washington for their support, guidance, and feedback in the development of this package.
