@@ -7,7 +7,7 @@ collect those with the specific configurations that the user needs.
 import pandas as pd
 
 # Pre-process
-df_runlog = pd.read_csv(r'~/SCALOS/project/runlogs/runlogs.csv')
+df_runlog = pd.read_csv(r'~/SCALOS/data/runlogs/runlogs.csv')
 config = df_runlog["CONFIGURATION"]
 config_list = []
 for cf in config:
