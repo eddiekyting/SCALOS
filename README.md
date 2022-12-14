@@ -1,4 +1,4 @@
-# <img src= "doc/picture/UW-S-20D_silhouette_top.png" height="60"></img> Supersonic Configuration At Low Speeds (SCALOS)
+# <img src= "doc/picture/UW-S-20D_silhouette_top.png" height="60"></img> [![Jekyll site CI](https://github.com/eddiekyting/SCALOS/actions/workflows/jekyll-docker.yml/badge.svg)](https://github.com/eddiekyting/SCALOS/actions/workflows/jekyll-docker.yml) Supersonic Configuration At Low Speeds (SCALOS)
 [![Python Package using Conda](https://github.com/eddiekyting/SCALOS/actions/workflows/python-package-conda.yml/badge.svg)](https://github.com/eddiekyting/SCALOS/actions/workflows/python-package-conda.yml) <br />
 This is a class project for CSE 583 at UW but will eventually be puslished for public use. 
 The goal of the project is to take the standard corrected Kirsten Wind Tunnel data for post process and data visualizatoin. 
