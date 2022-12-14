@@ -58,7 +58,7 @@ The data extract function allows user to input test entires and run number from 
         var df_data_sub: Extracted data set from test and run numbers (data frame)
 
     
-## Function: data_interp_der:
+## function: data_interp_der:
 The data process clean up the data for alignment, trucntion and intperolation. This function allows two different set of data with different length and with respect to different location to be manipulated for data process, i.e., subtraction, addition, derivatives, etc. The derivative function computes the data derivaties with respect to longitudinal or lateral direction.
 
 
