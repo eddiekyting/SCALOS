@@ -12,11 +12,9 @@ In the design of such aircraft it is important to investigate this nonlinear beh
 Numerous wind tunnel tests and CFD simulations have been used to date and more are planned. 
 Methods of active control of such configuration, using a variety of control surfaces, canards, and engine control techniques, are being developed and evaluated. Reference papers are linked below. 
 
-[2022 Supersonic Configurations at Low Speeds (SCALOS) - Project Background and Progress at University of Washington](https://arc.aiaa.org/doi/abs/10.2514/6.2022-1803)
-
-[2022 Supersonic Configurations at Low Speeds (SCALOS) - Model Geometry and Aerodynamic Results](https://arc.aiaa.org/doi/abs/10.2514/6.2022-1800)
-
-[2022 Supersonic Configurations at Low Speeds (SCALOS) - Test Simulation Correlation Studies](https://arc.aiaa.org/doi/abs/10.2514/6.2022-1801)
+    [1][2022 Supersonic Configurations at Low Speeds (SCALOS) - Project Background and Progress at University of Washington](https://arc.aiaa.org/doi/abs/10.2514/6.2022-1803)
+    [2][2022 Supersonic Configurations at Low Speeds (SCALOS) - Model Geometry and Aerodynamic Results](https://arc.aiaa.org/doi/abs/10.2514/6.2022-1800)
+    [3][2022 Supersonic Configurations at Low Speeds (SCALOS) - Test Simulation Correlation Studies](https://arc.aiaa.org/doi/abs/10.2514/6.2022-1801)
 
 ## Project Ojective 
 This project aims to analyze the experimental wind tunnel data for design space and trade-off study of supersonic airliner/ business jet at low speeds. 
