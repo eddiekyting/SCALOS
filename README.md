@@ -16,6 +16,7 @@ Methods of active control of such configuration, using a variety of control surf
 This project aims to analyze the experimental wind tunnel data for design space and trade-off study of supersonic airliner/ business jet at low speeds. 
 The goal of this class project is to extract the commercial wind tunnel standard corrected data for look-up/search, process, and visualization. 
 The future direction for this repository includes custom wind tunnel data corrections, model regressions, data reduction, and dynamic data augmentation. 
+The detailed project proposal could be found [here](doc/CSE583\ Project\ Proposal.pdf).
 
 ### Target Users
 The target users are researches, engineers, and student who are interested in aerodynammic configuration of supersonic configuration desgin at low speeds. 
@@ -32,7 +33,10 @@ The package incldues the following capabilities.
         iii. Data interpolation
         iv. Data derivatives 
     3. Data visulization 
-    
+
+The choice of packages selections are decided in early phase of project during technology review which is documented [here](doc/Technology\ Review.pdf).
+The following section briefly explains the fucntions purpose and outputs but reader should refer to `README.md` for detail [doucmentation](doc/README.md).
+
 ### Search / Lookup 
 This function allows user to input and look up configurations in the run logs and return test entires and run numbers correspoding to the inputs. 
 
@@ -106,42 +110,39 @@ The data structure of this project
     │       ├── autosort_runlog2331.xlsx
     │       └── runlogs.csv
     ├── doc
+    │   ├── 6.2022-1800.pdf
+    │   ├── 6.2022-1803.pdf
+    │   ├── CSE583 Project Proposal.pdf
     │   ├── Design.md
+    │   ├── Technology Review.pdf
     │   └── picture
     │       ├── UW-S-20B_silhouette_left.png
     │       └── UW-S-20D_silhouette_top.png
     ├── environment.yml
-    ├── proposal
-    │   └── CSE583 Project Proposal.pdf
-    ├── ref
-    │   ├── 6.2022-1800.pdf
-    │   └── 6.2022-1803.pdf
-    ├── scalos
-    │   ├── __init__.py
-    │   ├── sandbox
-    │   │   ├── chart1.html
-    │   │   ├── chart_run2298.html
-    │   │   ├── script_development.ipynb
-    │   │   ├── script_test.ipynb
-    │   │   └── unit_test.ipynb
-    │   ├── src
-    │   │   ├── __init__.py
-    │   │   ├── data_plot.py
-    │   │   ├── data_prep.py
-    │   │   ├── data_process.py
-    │   │   ├── runlog_search.py
-    │   │   └── user_input.py
-    │   └── tests
-    │       ├── __init__.py
-    │       ├── test_data_cleanup.py
-    │       ├── test_data_extract.py
-    │       ├── test_data_interp_der.py
-    │       ├── test_data_plt.py
-    │       ├── test_runlog_cleanup.py
-    │       └── test_runlog_search.py
-    └── technology_review
-        └── Technology Review.pdf
-
+    └── scalos
+        ├── __init__.py
+        ├── sandbox
+        │   ├── chart1.html
+        │   ├── chart_run2298.html
+        │   ├── script_development.ipynb
+        │   ├── script_test.ipynb
+        │   └── unit_test.ipynb
+        ├── src
+        │   ├── __init__.py
+        │   ├── data_plot.py
+        │   ├── data_prep.py
+        │   ├── data_process.py
+        │   ├── runlog_search.py
+        │   └── user_input.py
+        └── tests
+            ├── __init__.py
+            ├── test_data_cleanup.py
+            ├── test_data_extract.py
+            ├── test_data_interp_der.py
+            ├── test_data_plt.py
+            ├── test_runlog_cleanup.py
+            └── test_runlog_search.py
+        
 The `data` and its subfolder `runlogs` directories include experimental run logs and data sets from the KWT data (more data will be uploaded). 
 The data here is standard KWT corrected data without any custom corrections.
 The final data will be re-processed with final SCALOS-specific tare, intereferene and wall effects corrections. 
@@ -150,7 +151,7 @@ The `ref` directory contains all the published literatures related to SCALOS's w
 The `scalos` directory includes `src`, `tests`, and `sandbox` subfolders for modules, tests, and examples, respectively. 
 The `src` folder has modules of `search`, `data_prep`, `data_process`, and `data_plot` with corresponding unittests in `tests` folder.  
 The `sandbox` folder provides examples in Jupyter notebooks for new users. 
-The `doc` directory archieves all the documentation regarding this repository.  
+The `doc` directory archieves all the documentation regarding this project.  
 
 
 
