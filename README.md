@@ -1,6 +1,6 @@
 # <img src= "doc/picture/UW-S-20D_silhouette_top.png" height="60"></img> Supersonic Configuration At Low Speeds (SCALOS)
-[![Python Package using Conda](https://github.com/eddiekyting/SCALOS/actions/workflows/python-package-conda.yml/badge.svg)](https://github.com/eddiekyting/SCALOS/actions/workflows/python-package-conda.yml)
-\This is a class project for CSE 583 at UW but will eventually be puslished for public use. 
+[![Python Package using Conda](https://github.com/eddiekyting/SCALOS/actions/workflows/python-package-conda.yml/badge.svg)](https://github.com/eddiekyting/SCALOS/actions/workflows/python-package-conda.yml) <br />
+This is a class project for CSE 583 at UW but will eventually be puslished for public use. 
 The goal of the project is to take the standard corrected Kirsten Wind Tunnel data for post process and data visualizatoin. 
 This project is by Kuang-Ying"Eddie" Ting, Xiaohai"Bob" Hu, and Yiju Hu. 
 
