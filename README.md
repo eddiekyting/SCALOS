@@ -19,6 +19,10 @@ Methods of active control of such configuration, using a variety of control surf
 1. Nelson, C. P., Ting, K.-Y., Mavriplis, N., Soltani, R., and Livne, E., “Supersonic Configurations at LowSpeeds (SCALOS): Project Background and Progress atUniversity ofWashington,” AIAA Scitech 2022 Forum, 2022, p. 1803. https://doi.org/10.2514/6.2022-1803.
 2. Ting, K.-Y., Mavriplis, N., Soltani, R., Nelson, C., and Livne, E., “Supersonic Configurations at Low Speeds (SCALOS): Model Geometry and Aerodynamic Results,” AIAA Scitech 2022 Forum, 2022, p. 1800. https://doi.org/10.2514/6.2022-1800.
 3. Mavriplis, N., Ting, K.-Y., Moustafa, A., Hill, C., Soltani, R., Nelson, C., and Livne, E., “Supersonic Configurations at Low Speeds (SCALOS): Test / Simulation Correlation Studies,” AIAA Scitech 2022 Forum, 2022, p. 1801. https://doi.org/10.2514/6.2022-1801.
+4. Ting, K.-Y., Mavriplis, N., Soltani, R., Nelson, C. P., and Livne, E., “Supersonic Configurations at Low Speeds (SCALOS): The Aerodynamic Effects of Control Surfaces,” AIAA SciTech 2022 Forum, 2023. (Submitted on Dec 12, 2022).
+5. Ting, K.-Y., Mavriplis, N., Soltani, R., Nelson, C. P., and Livne, E., “Supersonic Configurations at Low Speeds (SCALOS): Longitudinal Aerodynamics: Configuration Variations and Control Surfaces Effects,” AIAA SciTech 2022 Forum, 2023. (Submitted on Dec 12, 2022).
+6. Mavriplis, N., Ting, K.-Y., Soltani, R., Nelson, C. P., and Livne, E., “Supersonic Configurations at Low Speeds (SCALOS): CFD Aid Data Reduction,” AIAA SciTech 2022 Forum, 2023. Abstract Accepted. (Submitted on Dec 12, 2022).
+7. Nelson, C. P., Ting, K.-Y., Ignacio, J. Mavriplis, N., Soltani, R., and Livne, E., “Supersonic Configurations at Low Speeds (SCALOS): Configuration Comparison of SCALOS to the Existing Designs,” AIAA SciTech 2023 Forum, 2023. (Submitted on Dec 12, 2022).
 
 ## Project Ojective 
 This project aims to analyze the experimental wind tunnel data for design space and trade-off study of supersonic airliner/ business jet at low speeds. 
