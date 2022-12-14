@@ -12,9 +12,9 @@ In the design of such aircraft it is important to investigate this nonlinear beh
 Numerous wind tunnel tests and CFD simulations have been used to date and more are planned. 
 Methods of active control of such configuration, using a variety of control surfaces, canards, and engine control techniques, are being developed and evaluated. Reference papers are linked below. 
 
-1. [2022 Supersonic Configurations at Low Speeds (SCALOS) - Project Background and Progress at University of Washington](https://arc.aiaa.org/doi/abs/10.2514/6.2022-1803)
-2. [2022 Supersonic Configurations at Low Speeds (SCALOS) - Model Geometry and Aerodynamic Results](https://arc.aiaa.org/doi/abs/10.2514/6.2022-1800) 
-3. [2022 Supersonic Configurations at Low Speeds (SCALOS) - Test Simulation Correlation Studies](https://arc.aiaa.org/doi/abs/10.2514/6.2022-1801) 
+1. Nelson, C. P., Ting, K.-Y., Mavriplis, N., Soltani, R., and Livne, E., “Supersonic Configurations at LowSpeeds (SCALOS): Project Background and Progress atUniversity ofWashington,” AIAA Scitech 2022 Forum, 2022, p. 1803. https://doi.org/10.2514/6.2022-1803.
+2. Ting, K.-Y., Mavriplis, N., Soltani, R., Nelson, C., and Livne, E., “Supersonic Configurations at Low Speeds (SCALOS): Model Geometry and Aerodynamic Results,” AIAA Scitech 2022 Forum, 2022, p. 1800. https://doi.org/10.2514/6.2022-1800.
+3. Mavriplis, N., Ting, K.-Y., Moustafa, A., Hill, C., Soltani, R., Nelson, C., and Livne, E., “Supersonic Configurations at Low Speeds (SCALOS): Test / Simulation Correlation Studies,” AIAA Scitech 2022 Forum, 2022, p. 1801. https://doi.org/10.2514/6.2022-1801.
 
 ## Project Ojective 
 This project aims to analyze the experimental wind tunnel data for design space and trade-off study of supersonic airliner/ business jet at low speeds. 
@@ -37,7 +37,7 @@ The package incldues the following capabilities.
     3. Data visulization 
 
 The choice of packages selections are decided in early phase of project during technology review which is documented [here](doc/CSE583_TechnologyReview.pdf).
-The following section briefly explains the fucntions purpose and outputs but reader should refer to `README.md` for detail [doucmentation](doc/README.md).
+The following section briefly explains the fucntions purpose and outputs but reader should refer to `doc/README.md` for detail [doucmentation](doc/README.md).
 
 ### Search / Lookup 
 This function allows user to input and look up configurations in the run logs and return test entires and run numbers correspoding to the inputs. 
