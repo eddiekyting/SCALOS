@@ -17,6 +17,10 @@ This project aims to analyze the experimental wind tunnel data for design space 
 The goal of this class project is to extract the commercial wind tunnel standard corrected data for look-up/search, process, and visualization. 
 The future direction for this repository includes custom wind tunnel data corrections, model regressions, data reduction, and dynamic data augmentation. 
 
+### Target Users
+The target users are researches, engineers, and student who are interested in aerodynammic configuration of supersonic configuration desgin at low speeds. 
+The detailed target audiences description and user senario are [here](doc/Design.md).
+
 
 ### Package Capabilities
 The package incldues the following capabilities. 
@@ -138,15 +142,15 @@ The data structure of this project
     └── technology_review
         └── Technology Review.pdf
 
-The 'data' and its subfolder 'runlogs' directories include experimental run logs and data sets from the KWT data (more data will be uploaded). 
+The `data` and its subfolder `runlogs` directories include experimental run logs and data sets from the KWT data (more data will be uploaded). 
 The data here is standard KWT corrected data without any custom corrections.
 The final data will be re-processed with final SCALOS-specific tare, intereferene and wall effects corrections. 
 The absolute levels of some paramters are expected to shift slightly, but this is note expected to  impact the comparative results and increments.
-The 'ref' directory contains all the published literatures related to SCALOS's work at the University of Washington. 
-The 'scalos' directory includes 'src', 'test', and 'sandbox' subfolders for modules, tests, and examples, respectively. 
-The 'src' folder has modules of 'search', 'data_prep', 'data_process', and 'data_plot' with corresponding unittests in 'tests' folder.  
-The 'sandbox' folder provides examples in Jupyter notebooks for new users. 
-The 'doc' directory archieves all the documentation regarding this repository.  
+The `ref` directory contains all the published literatures related to SCALOS's work at the University of Washington. 
+The `scalos` directory includes `src`, `tests`, and `sandbox` subfolders for modules, tests, and examples, respectively. 
+The `src` folder has modules of `search`, `data_prep`, `data_process`, and `data_plot` with corresponding unittests in `tests` folder.  
+The `sandbox` folder provides examples in Jupyter notebooks for new users. 
+The `doc` directory archieves all the documentation regarding this repository.  
 
 
 
