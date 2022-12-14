@@ -13,7 +13,7 @@ from scalos.src import data_extract
 from scalos.src import data_interp_der
 
 # Define a class in which the tests will run
-class TestDataprocess(unittest.TestCase):
+class TestDatainterp(unittest.TestCase):
     """
     Unit test class
 

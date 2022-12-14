@@ -92,6 +92,10 @@ def data_extract(df_log, df_data, test, run_num):
         if not isinstance(test[i], int):
             raise ValueError("Test entries must be integer!")
 
+        # Run number must be a list
+        if not isinstance(run_num[i], list):
+            raise ValueError("Run numbers are invalid!")
+
         # Entries must be not empty
         if not np.any(test[i]) or not np.any(run_num[i]):
             raise ValueError("Test entries and run numbers must be not empty!")
@@ -100,11 +104,11 @@ def data_extract(df_log, df_data, test, run_num):
         if not any(np.unique(df_log[df_log.columns.tolist()[1]]) == test[i]):
             raise ValueError("Test entries are invalid!")
 
-        # Run number must be a list
-        if not isinstance(run_num[i], list):
-            raise ValueError("Run numbers are invalid!")
-
         for j in range(len(run_num[i])):
+            # Entries must not be empty 
+            if not np.any(run_num[i][j]):
+                raise ValueError("Run number must be non-empty!")
+
             # Each run number must be valid
             if run_num[i][j] < 0 or run_num[i][j] > np.max(
                 df_log[df_log.columns.tolist()[0]][
