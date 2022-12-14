@@ -8,15 +8,22 @@ The modules and fucntions are in `src` directory.
           ├── runlog_search.py
           └── user_input.py
       
-## function: [search_configuration](../scalos/src/user_input.py)
+## function: [start](../scalos/src/user_input.py)
+This function is the start point of our tool. With this function, users can interact through 
+command-line interface. User can choose among entering the configurations, seeing some 
+configuration examples, and quit.
 
-Get the run numbers and test ids corresponding to the specific configuration
-Only the runs whose configuration is a superset of the input configuration
-:param input: User input, the configuration they interested in, a list
-:return: the run numbers we need, a list
+## function: [search_configuration](../scalos/src/runlog_search.py)
 
-## function: [runlog_search](../scalos/src/runlog_search.py)
+This function get the run numbers and test ids corresponding to the specific configuration.
+If a run's configuration is a superset of the input configuration, the run will be collected.
 
+    search_configuration(input):
+      parameters: 
+        input: User input, the configuration they are interested in, a list
+      return: 
+        test_list   : The corresponding test numbers, a list
+        run_num_list: The corresponding run numbers, a list
 
 ## function: [runlog_cleanup](../scalos/src/data_prep.py)
 This function clean up run logs from year to year. Make all the columns consistent. 
