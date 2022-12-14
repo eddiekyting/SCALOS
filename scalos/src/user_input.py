@@ -16,7 +16,7 @@ def start():
     while not stop:
         print()
         print(" *** Please enter the configurations you need *** ")
-
+        print(" *** Enter 'See Examples' to see some configuration examples *** ")
         print(" *** Enter 'QUIT' to  quit the tool *** ")
         print()
         response = ""
@@ -37,6 +37,11 @@ def start():
             cfs.remove(" ")
         while "" in cfs:
             cfs.remove("")
+        if cfs == ["SEE","EXAMPLES"]:
+            print("W15 A15 F15 V15 H15A.1 VF1 DF1")
+            print("F15 A20 W20 N20.T V20 H20.T C15.F")
+            print("F15 A15 W15 N20.B V15.1 DF.1 VF.1 H20.L C15.F")
+            continue
         if len(cfs) == 0:
             print("Please enter a valid configuration! Try Again!")
             continue
