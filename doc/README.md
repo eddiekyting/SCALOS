@@ -78,16 +78,13 @@ The data process clean up the data for alignment, trucntion and intperolation. T
 The visulization allows user to visual the data and compare different set of data.
 
 
-  data_plt(plot_vars, df_log, df_data, test, run_num):
-  
-    parameters:
-    
-        arg plot_type: Plot type specificaiton (to be complete)
-        arg plot_vars: Plot variables from data set variables
-        arg df_log:    Data log from data_prep output (data frame)
-        arg df_data:   Data set from data_prep output (data frame)
-        arg test:      Test entries (list)
-        arg run_num:   Run numbers correspondign to test entires (list)
-        
-    return:
-        plots
+    data_plt(plot_vars, df_log, df_data, test, run_num):
+      parameters:
+          arg plot_type: Plot type specificaiton (to be complete)
+          arg plot_vars: Plot variables from data set variables
+          arg df_log:    Data log from data_prep output (data frame)
+          arg df_data:   Data set from data_prep output (data frame)
+          arg test:      Test entries (list)
+          arg run_num:   Run numbers correspondign to test entires (list)
+      return:
+          plots
