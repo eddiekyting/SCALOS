@@ -112,11 +112,10 @@ The data structure of this project
     │       ├── autosort_runlog2331.xlsx
     │       └── runlogs.csv
     ├── doc
-    │   ├── 6.2022-1800.pdf
-    │   ├── 6.2022-1803.pdf
-    │   ├── CSE583 Project Proposal.pdf
+    │   ├── CSE583_ProjectProposal.pdf
+    │   ├── CSE583_TechnologyReview.pdf
     │   ├── Design.md
-    │   ├── Technology Review.pdf
+    |   ├── README.md
     │   └── picture
     │       ├── UW-S-20B_silhouette_left.png
     │       └── UW-S-20D_silhouette_top.png
