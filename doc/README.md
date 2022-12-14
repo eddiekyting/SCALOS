@@ -22,6 +22,7 @@ Only the runs whose configuration is a superset of the input configuration
 This function clean up run logs from year to year. Make all the columns consistent. 
 User should avoid to modified this. 
 
+  
   runlog_cleanup(df_log2298, df_log2320, df_log2326, df_log2331):
     parameters: 
       arg df_logxxxx: Data log with entry numbers (.xlsx file)
@@ -34,6 +35,7 @@ This function concatinate data sets from year to year.
 It checks all data sets have cosnstent entries and concatinate them at the end. 
 User should avoid to modified this. 
 
+
   data_cleanup(df_data2298, df_data2320, df_data2326, df_data2331):
     parameters: df_data
       arg df_data: Data set with entry numbers (.xlsx file)
@@ -44,6 +46,7 @@ User should avoid to modified this.
 
 ## function: data_extract:
 The data extract function allows user to input test entires and run number from search and look up and extract corresponding sub data set in data frame. 
+
 
   data_extract(df_log, df_data, test, run_num):
     parameters: df_log, df_data, test, run_num
@@ -59,6 +62,7 @@ The data extract function allows user to input test entires and run number from 
 ## Function: data_interp_der:
 The data process clean up the data for alignment, trucntion and intperolation. This function allows two different set of data with different length and with respect to different location to be manipulated for data process, i.e., subtraction, addition, derivatives, etc. The derivative function computes the data derivaties with respect to longitudinal or lateral direction.
 
+
   data_interp_der(df_log, df_data, test, run_num):
     parameters: df_log, df_data, test, run_num
       arg df_log:  Data log from data_extract output (data frame)
@@ -73,13 +77,17 @@ The data process clean up the data for alignment, trucntion and intperolation. T
 ## function: data_plt
 The visulization allows user to visual the data and compare different set of data.
 
+
   data_plt(plot_vars, df_log, df_data, test, run_num):
+  
     parameters:
+    
         arg plot_type: Plot type specificaiton (to be complete)
         arg plot_vars: Plot variables from data set variables
         arg df_log:    Data log from data_prep output (data frame)
         arg df_data:   Data set from data_prep output (data frame)
         arg test:      Test entries (list)
         arg run_num:   Run numbers correspondign to test entires (list)
+        
     return:
         plots
