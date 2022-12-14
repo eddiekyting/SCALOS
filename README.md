@@ -16,7 +16,7 @@ Methods of active control of such configuration, using a variety of control surf
 This project aims to analyze the experimental wind tunnel data for design space and trade-off study of supersonic airliner/ business jet at low speeds. 
 The goal of this class project is to extract the commercial wind tunnel standard corrected data for look-up/search, process, and visualization. 
 The future direction for this repository includes custom wind tunnel data corrections, model regressions, data reduction, and dynamic data augmentation. 
-The detailed project proposal could be found [here](doc/CSE583 Project Proposal.pdf).
+The detailed project proposal could be found [here](doc/CSE583_ProjectProposal.pdf).
 
 ### Target Users
 The target users are researches, engineers, and student who are interested in aerodynammic configuration of supersonic configuration desgin at low speeds. 
@@ -32,7 +32,7 @@ The package incldues the following capabilities.
         ii. Data Interpolation and Derivative
     3. Data visulization 
 
-The choice of packages selections are decided in early phase of project during technology review which is documented [here](doc/Technology Review.pdf).
+The choice of packages selections are decided in early phase of project during technology review which is documented [here](doc/CSE583_TechnologyReview.pdf).
 The following section briefly explains the fucntions purpose and outputs but reader should refer to `README.md` for detail [doucmentation](doc/README.md).
 
 ### Search / Lookup 
