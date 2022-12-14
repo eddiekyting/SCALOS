@@ -73,7 +73,9 @@ The modulated wind tunnel model components are tabualted below.
     CS              Clam shell speed brakes
     FTDXD           Forward trip dots (10 inch behind nose trip ring) 
 
-    
+### Data Extract 
+The data extract function allows user to input test entires and run number from search and look up and extract corresponding sub data set in data frame. 
+
 ### Data Process 
 The data process clean up the data for alignment, trucntion and intperolation. This function allows two different set of data with different length and with respect to different location to be manipulated for data process, i.e., subtraction, addition, derivatives, etc. 
 The derivative function computes the data derivaties with respect to longitudinal or lateral direction. 
@@ -85,36 +87,68 @@ The visulization allows user to visual the data and compare different set of dat
 The data structure of this project 
 
     .
+    ├── LICENSE
     ├── README.md
-    └── project
-        ├── CSE583 Project Proposal.pptx
-        ├── data
-        │   ├── finaldata_uw2298.csv
-        │   ├── finaldata_uw2320.csv
-        │   ├── finaldata_uw2326.csv
-        │   └── finaldata_uw2331.csv
-        ├── doc
-        │   └── Design.md
-        ├── ref
-        │   ├── 6.2022-1800.pdf
-        │   └── 6.2022-1803.pdf
-        ├── runlogs
-        │   ├── Autosort Run Log 2298.xlsx
-        │   ├── Autosort Run Log 2320.xlsx
-        │   ├── Autosort Run Log 2326.xlsx
-        │   └── Autosort Run Log 2331.xlsx
-        ├── sandbox
-        │   └── Extract_data.ipynb
-        ├── src
-        │   └── __init__.py
-        └── tests
-            └── __init__.py
+    ├── data
+    │   ├── data.csv
+    │   ├── finaldata_uw2298.csv
+    │   ├── finaldata_uw2320.csv
+    │   ├── finaldata_uw2326.csv
+    │   ├── finaldata_uw2331.csv
+    │   └── runlogs
+    │       ├── autosort_runlog2298.xlsx
+    │       ├── autosort_runlog2320.xlsx
+    │       ├── autosort_runlog2326.xlsx
+    │       ├── autosort_runlog2331.xlsx
+    │       └── runlogs.csv
+    ├── doc
+    │   ├── Design.md
+    │   └── picture
+    │       ├── UW-S-20B_silhouette_left.png
+    │       └── UW-S-20D_silhouette_top.png
+    ├── environment.yml
+    ├── proposal
+    │   └── CSE583 Project Proposal.pdf
+    ├── ref
+    │   ├── 6.2022-1800.pdf
+    │   └── 6.2022-1803.pdf
+    ├── scalos
+    │   ├── __init__.py
+    │   ├── sandbox
+    │   │   ├── chart1.html
+    │   │   ├── chart_run2298.html
+    │   │   ├── script_development.ipynb
+    │   │   ├── script_test.ipynb
+    │   │   └── unit_test.ipynb
+    │   ├── src
+    │   │   ├── __init__.py
+    │   │   ├── data_plot.py
+    │   │   ├── data_prep.py
+    │   │   ├── data_process.py
+    │   │   ├── runlog_search.py
+    │   │   └── user_input.py
+    │   └── tests
+    │       ├── __init__.py
+    │       ├── test_data_cleanup.py
+    │       ├── test_data_extract.py
+    │       ├── test_data_interp_der.py
+    │       ├── test_data_plt.py
+    │       ├── test_runlog_cleanup.py
+    │       └── test_runlog_search.py
+    └── technology_review
+        └── Technology Review.pdf
 
-The ''' data ''' and ''' runlogs''' directory includes experimental run logs and data sets from the KWT data (more data will be uploaded). 
-The data here is standard KWT corrected data without any custom corrections. 
-The ''' ref ''' directory contains all the published literatures related to SCALOS's work at the University of Washington. 
-The ''' src ''' directory has modules of ''' search ''', ''' data_prep ''', ''' data_process ''', and ''' data_plot ''' with corresponding unittests in '''tests''' folder.  
-The ''' examples ''' folder provides examples in Jupyter notebooks for new users. 
+The 'data' and its subfolder 'runlogs' directories include experimental run logs and data sets from the KWT data (more data will be uploaded). 
+The data here is standard KWT corrected data without any custom corrections.
+The final data will be re-processed with final SCALOS-specific tare, intereferene and wall effects corrections. 
+The absolute levels of some paramters are expected to shift slightly, but this is note expected to  impact the comparative results and increments.
+The 'ref' directory contains all the published literatures related to SCALOS's work at the University of Washington. 
+The 'scalos' directory includes 'src', 'test', and 'sandbox' subfolders for modules, tests, and examples, respectively. 
+The 'src' folder has modules of 'search', 'data_prep', 'data_process', and 'data_plot' with corresponding unittests in 'tests' folder.  
+The 'sandbox' folder provides examples in Jupyter notebooks for new users. 
+The 'doc' directory archieves all the documentation regarding this repository.  
+
+
 
 ## Installation
 [1] Install the latest version of Anaconda for your system from [here](https://docs.anaconda.com/anaconda/install/). Please make sure to **install the Python 3.9 version**. The dependencies should also work for other Python versions. Project aim to support Linux and MacOS, so make sure you have access to a machine with either of these operating systems.
