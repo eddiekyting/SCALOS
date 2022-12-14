@@ -1,5 +1,5 @@
 """
-DataPrep test script
+DataPrep test script - data and run log clean up
 """
 import unittest
 # import numpy as np
@@ -21,9 +21,7 @@ class TestDatacleanup(unittest.TestCase):
     """
     def test_data_cleanup_smoke(self):
         """
-        smoke test
-
-        check if the test run through
+        smoke test - function working properly
         """
 #         df_data2298 = self.df_data2298
 #         df_data2320 = self.df_data2320

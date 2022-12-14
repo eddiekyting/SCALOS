@@ -23,12 +23,12 @@ import matplotlib.pyplot as plt
 
 # class DataPlot:
 
-"""
-function: plt_data
+# """
+# function: plt_data
 
-    Plot input data for visulization
+#     Plot input data for visulization
 
-"""
+# """
 # def __init__(self, plot_vars, df_log, df_data, test, run_num):
 #     """
 #     function:
@@ -59,8 +59,7 @@ function: plt_data
 
 def data_plt(plot_vars, df_log, df_data, test, run_num):
     """
-    function:
-        Plot data
+    function: Plot data
 
     parameters:
         arg plot_type: Plot type specificaiton (to be complete)

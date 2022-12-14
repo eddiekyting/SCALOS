@@ -1,5 +1,5 @@
 """
-DataPrep test script
+DataProcess - Data Extract test script
 """
 import unittest
 # import numpy as np
@@ -31,8 +31,8 @@ class TestDataextract(unittest.TestCase):
     df_data2326 = pd.read_csv(r'~/SCALOS/data/finaldata_uw2326.csv')
     df_data2331 = pd.read_csv(r'~/SCALOS/data/finaldata_uw2331.csv')
     df_data = data_cleanup(df_data2298, df_data2320, df_data2326, df_data2331)
-    test = [2298]
-    run_num = [[49, 51, 37, 56, 57, 26]]
+    test = [2320]
+    run_num = [[50, 51, 37, 56, 57,]]
 
     def test_data_extract_smoke(self):
         """
@@ -45,6 +45,22 @@ class TestDataextract(unittest.TestCase):
         one shot test - function work as expected
         """
         data_extract(self.df_log, self.df_data, self.test, self.run_num)
+
+    def test_data_extract_one_shot2(self):
+        """
+        one shot test - function work as expected
+        """
+        test = [2326]
+        run_num = [[17, 24, 10, 31 ,38, 67,]]
+        data_extract(self.df_log, self.df_data, test, run_num)
+
+    def test_data_extract_one_shot3(self):
+        """
+        one shot test - function work as expected
+        """
+        test = [2331]
+        run_num = [[40, 47, 14, 54, 61,]]
+        data_extract(self.df_log, self.df_data, test, run_num)
 
     def test_data_extract_edge_test1(self):
         """
@@ -59,7 +75,7 @@ class TestDataextract(unittest.TestCase):
         edge test - incorrect input detection - run_num non-list input
         """
         with self.assertRaises(ValueError):
-            run_num = [49, 51, 37, 56, 57, 26]
+            run_num = [50, 51, 37, 56, 57]
             data_extract(self.df_log, self.df_data, self.test, run_num)
 
     def test_data_extract_edge_test3(self):
@@ -67,7 +83,7 @@ class TestDataextract(unittest.TestCase):
         edge test - incorrect input detection - empty list detection
         """
         with self.assertRaises(ValueError):
-            run_num = [[49, 51], [],[37, 56, 57, 26]]
+            run_num = [[50, 51], [], [37, 56, 57]]
             data_extract(self.df_log, self.df_data, self.test, run_num)
 
     def test_data_extract_edge_test4(self):
@@ -83,7 +99,7 @@ class TestDataextract(unittest.TestCase):
         edge test - incorrect input detection - empty entry
         """
         with self.assertRaises(ValueError):
-            run_num = [[49, 51], [37, None, 56, 57, 26]]
+            run_num = [[50, 51], [37, None, 56, 57]]
             data_extract(self.df_log, self.df_data, self.test, run_num)
 
     def test_data_extract_edge_test6(self):
@@ -99,7 +115,7 @@ class TestDataextract(unittest.TestCase):
         edge test - incorrect input detection - Tare run
         """
         with self.assertRaises(ValueError):
-            run_num = [[49, 51, 36, 56, 57,]]
+            run_num = [[47, 51, 36, 56, 57]]
             data_extract(self.df_log, self.df_data, self.test, run_num)
 
     def test_data_extract_edge_test8(self):
@@ -107,5 +123,5 @@ class TestDataextract(unittest.TestCase):
         edge test - incorrect input detection - Mix run type
         """
         with self.assertRaises(ValueError):
-            run_num = [[49, 51, 36, 56, 60,]]
+            run_num = [[49, 51, 36, 56, 64]]
             data_extract(self.df_log, self.df_data, self.test, run_num)

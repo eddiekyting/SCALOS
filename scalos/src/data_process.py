@@ -22,17 +22,17 @@ import scipy as sp
 
 # class DataProcess:
 
-"""
-function: data_extract
+# """
+# function: data_extract
 
-    Extract data from input test entries with corresponding run numbers
+#     Extract data from input test entries with corresponding run numbers
 
-function: data_interp_derivatives
+# function: data_interp_derivatives
 
-    Truncate data within max min and min max range (no exterpolation)
-    Linear interpolate data on with integer pitch (P) or yaw (Y) run
-    Compute derivaties with respect to alpha or beta
-"""
+#     Truncate data within max min and min max range (no exterpolation)
+#     Linear interpolate data on with integer pitch (P) or yaw (Y) run
+#     Compute derivaties with respect to alpha or beta
+# """
 #     def __init__(self, df_log, df_data, test, run_num):
 #         """
 #         function:
@@ -58,8 +58,7 @@ function: data_interp_derivatives
 
 def data_extract(df_log, df_data, test, run_num):
     """
-    function:
-        Data extraction
+    function: Data extraction
 
     parameters:
         arg df_log:  Data log from data_prep output (data frame)
@@ -105,7 +104,7 @@ def data_extract(df_log, df_data, test, run_num):
             raise ValueError("Test entries are invalid!")
 
         for j in range(len(run_num[i])):
-            # Entries must not be empty 
+            # Entries must not be empty
             if not np.any(run_num[i][j]):
                 raise ValueError("Run number must be non-empty!")
 
@@ -147,8 +146,7 @@ def data_extract(df_log, df_data, test, run_num):
 
 def data_interp_der(df_log, df_data, test, run_num):
     """
-    function:
-        Data inpterolation and derivatives
+    function: Data inpterolation and derivatives
 
     parameters:
         arg df_log:  Data log from data_extract output (data frame)
@@ -169,6 +167,47 @@ def data_interp_der(df_log, df_data, test, run_num):
 #     df_data = self.df_data
 #     test = self.test
 #     run_num = self.run_num
+    # Unit test
+    if len(test) != len(run_num):
+        raise ValueError("Test entries and run numbers must be consistent!")
+
+    df_data_sub = pd.DataFrame()
+    df_log_sub = pd.DataFrame()
+    # Unit test
+    for i in range(len(test)):
+        # Test Entries must be integer
+        if not isinstance(test[i], int):
+            raise ValueError("Test entries must be integer!")
+
+        # Run number must be a list
+        if not isinstance(run_num[i], list):
+            raise ValueError("Run numbers are invalid!")
+
+        # Entries must be not empty
+        if not np.any(test[i]) or not np.any(run_num[i]):
+            raise ValueError("Test entries and run numbers must be not empty!")
+
+        # Test entries must be valid
+        if not any(np.unique(df_log[df_log.columns.tolist()[1]]) == test[i]):
+            raise ValueError("Test entries are invalid!")
+
+        for j in range(len(run_num[i])):
+            # Entries must not be empty
+            if not np.any(run_num[i][j]):
+                raise ValueError("Run number must be non-empty!")
+
+            # Each run number must be valid
+            if run_num[i][j] < 0 or run_num[i][j] > np.max(
+                df_log[df_log.columns.tolist()[0]][
+                    df_log[df_log.columns.tolist()[1]] == test[i]]):
+                raise ValueError("Run numbers are invalid!")
+
+            # Entries must be not weight tare
+            if np.any( pd.isna( df_log[df_log.columns.tolist()[2]][
+                (df_log[df_log.columns.tolist()[1]] == test[i]) &
+                (df_log[df_log.columns.tolist()[0]] == run_num[i][j])
+            ])):
+                raise ValueError("Test num and corresponding run num is weight tare")
 
     # Check run type
     if pd.unique(df_log[df_log.columns.tolist()[4]]) == 'P6':
