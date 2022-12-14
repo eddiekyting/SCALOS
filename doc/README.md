@@ -8,17 +8,17 @@ The modules and fucntions are in `src` directory.
           ├── runlog_search.py
           └── user_input.py
       
-## function: search_configuration
+## function: [search_configuration](../scalos/src/user_input.py)
 
 Get the run numbers and test ids corresponding to the specific configuration
 Only the runs whose configuration is a superset of the input configuration
 :param input: User input, the configuration they interested in, a list
 :return: the run numbers we need, a list
 
-## function runlog_search
+## function: [runlog_search](../scalos/src/runlog_search.py)
 
 
-## function: runlog_cleanup
+## function: [runlog_cleanup](../scalos/src/data_prep.py)
 This function clean up run logs from year to year. Make all the columns consistent. 
 User should avoid to modified this. 
 
@@ -29,7 +29,7 @@ User should avoid to modified this.
         var df_log    : Concatinated data log from inputs in data frame format
 
 
-## fucntion: data_cleanup
+## fucntion: [data_cleanup](../scalos/src/data_prep.py)
 This function concatinate data sets from year to year. 
 It checks all data sets have cosnstent entries and concatinate them at the end. 
 User should avoid to modified this. 
@@ -43,7 +43,7 @@ User should avoid to modified this.
 
 
 
-## function: data_extract:
+## function: [data_extract](../scalos/src/data_process.py)
 The data extract function allows user to input test entires and run number from search and look up and extract corresponding sub data set in data frame. 
 
 
@@ -58,7 +58,7 @@ The data extract function allows user to input test entires and run number from 
         var df_data_sub: Extracted data set from test and run numbers (data frame)
 
     
-## function: data_interp_der:
+## function: [data_interp_der](../scalos/src/data_process.py)
 The data process clean up the data for alignment, trucntion and intperolation. This function allows two different set of data with different length and with respect to different location to be manipulated for data process, i.e., subtraction, addition, derivatives, etc. The derivative function computes the data derivaties with respect to longitudinal or lateral direction.
 
 
@@ -73,7 +73,7 @@ The data process clean up the data for alignment, trucntion and intperolation. T
         var df_data_derivative:  Data derivatives from extracted data sets (data frame)
 
     
-## function: data_plt
+## function: [data_plt](../scalos/src/data_plot.py)
 The visulization allows user to visual the data and compare different set of data.
 
 
