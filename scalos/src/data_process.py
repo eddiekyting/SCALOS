@@ -141,7 +141,7 @@ def data_extract(df_log, df_data, test, run_num):
 
     return df_log_sub, df_data_sub
 
-def data_interp_derivative(df_log, df_data, test, run_num):
+def data_interp_der(df_log, df_data, test, run_num):
     """
     function:
         Data inpterolation and derivatives

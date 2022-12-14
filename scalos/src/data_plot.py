@@ -57,7 +57,7 @@ function: plt_data
 #     self.test = test
 #     self.run_num = run_num
 
-def plt_data(self):
+def data_plt(plot_vars, df_log, df_data, test, run_num):
     """
     function:
         Plot data
@@ -79,11 +79,11 @@ def plt_data(self):
         plots
     """
 #         plot_type = self.plot_type
-    plot_vars = self.plot_vars
-    df_log = self.df_log
-    df_data = self.df_data
-    test = self.test
-    run_num = self.run_num
+#     plot_vars = self.plot_vars
+#     df_log = self.df_log
+#     df_data = self.df_data
+#     test = self.test
+#     run_num = self.run_num
 
     # Run type must be consistant
     if pd.unique(df_log[df_log.columns.tolist()[4]]) == 'P6':

@@ -1,5 +1,5 @@
 """
-DataPrep test script
+Data Process -  data_interp_derivative test script
 """
 import unittest
 # import numpy as np
@@ -10,7 +10,7 @@ import pandas as pd
 from scalos.src import runlog_cleanup
 from scalos.src import data_cleanup
 from scalos.src import data_extract
-from scalos.src import data_interp_derivative
+from scalos.src import data_interp_der
 
 # Define a class in which the tests will run
 class TestDataprocess(unittest.TestCase):
@@ -36,15 +36,15 @@ class TestDataprocess(unittest.TestCase):
     runnum = [[49, 51, 37, 56, 57, 26]]
     df_log_sub, df_data_sub = data_extract(df_log, df_data, test, runnum)
 
-    def test_data_extract_smoke(self):
+    def test_data_interp_der_smoke1(self):
         """
         smoke test
 
         check if the test run through
         """
-        data_interp_derivative(self.df_log_sub, self.df_data_sub, self.test, self.runnum)
+        data_interp_der(self.df_log_sub, self.df_data_sub, self.test, self.runnum)
 
-#     def test_data_extract_one_shot1(self):
+#     def test_data_interp_derivative_smoke2(self):
 #         """
 #         smoke test
 
@@ -52,4 +52,14 @@ class TestDataprocess(unittest.TestCase):
 #         """
 #         test = [2298]
 #         runnum = [[49, 51, 37, 56, 57, 26]]
-#         df_log_sub, df_data_sub = data_extract(self.df_log, self.df_data, test, runnum)
+#         df_log_sub, df_data_sub = data_extract(self.df_log_sub, self.df_data_sub_interp, test, runnum)
+
+#     def test_data_interp_derivative_smoke2(self):
+#         """
+#         smoke test
+
+#         check if the test run through
+#         """
+#         test = [2298]
+#         runnum = [[49, 51, 37, 56, 57, 26]]
+#         df_log_sub, df_data_sub = data_extract(self.df_log_sub, self.df_data_sub_der, test, runnum)
