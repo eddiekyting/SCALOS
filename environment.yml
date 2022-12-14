@@ -4,9 +4,9 @@ channels:
 dependencies:
   - conda
   - python=3.9
-  - menuinst
+  # - menuinst
   - console_shortcut
-  - powershell_shortcut
+  # - powershell_shortcut
   - conda-env
   - conda-build
   - conda-verify
