@@ -25,9 +25,11 @@ for cf_u in config_unique_str:
 def search_configuration(input):
     """
     # Get the run numbers and test ids corresponding to the specific configuration
-    Only the runs whose configuration is a superset of the input configuration
-    :param input: User input, the configuration they interested in, a list
-    :return: the run numbers we need, a list
+    If a run's configuration is a superset of the input configuration, the run will
+    be collected.
+    :param input: user input, the configuration they interested in, a list
+    :return: test_list: the tests we need, a list
+             run_num_list: the run numbers we need, a list
     """
     if input == []:
         raise ValueError("The input is null!")

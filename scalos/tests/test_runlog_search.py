@@ -5,7 +5,7 @@ validity of the function runlog_search written in runlog_search.py
 import unittest
 import sys
 sys.path.append("..")
-from src.runlog_search import search_configuration
+from scalos.src.runlog_search import search_configuration
 
 class TestRunlogSearch(unittest.TestCase):
     """

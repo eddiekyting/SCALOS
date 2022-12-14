@@ -42,8 +42,8 @@ class TestRunlogcleanup(unittest.TestCase):
 #         df_log2320 = self.df_log2320
 #         df_log2326 = self.df_log2326
 #         df_log2331 = self.df_log2331
-        df_log2298 = pd.read_excel(r'~/SCALOS/data/runlogs/Autosort Run Log 2298.xlsx')
-        df_log2320 = pd.read_excel(r'~/SCALOS/data/runlogs/Autosort Run Log 2320.xlsx')
-        df_log2326 = pd.read_excel(r'~/SCALOS/data/runlogs/Autosort Run Log 2326.xlsx')
-        df_log2331 = pd.read_excel(r'~/SCALOS/data/runlogs/Autosort Run Log 2331.xlsx')
+        df_log2298 = pd.read_excel(r'~/SCALOS/data/runlogs/autosort_runlog2298.xlsx')
+        df_log2320 = pd.read_excel(r'~/SCALOS/data/runlogs/autosort_runlog2320.xlsx')
+        df_log2326 = pd.read_excel(r'~/SCALOS/data/runlogs/autosort_runlog2326.xlsx')
+        df_log2331 = pd.read_excel(r'~/SCALOS/data/runlogs/autosort_runlog2331.xlsx')
         runlog_cleanup(df_log2298, df_log2320, df_log2326, df_log2331)
