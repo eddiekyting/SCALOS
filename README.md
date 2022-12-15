@@ -47,6 +47,8 @@ The package incldues the following capabilities.
 The choice of packages selections are decided in early phase of project during technology review which is documented [here](doc/CSE583_TechnologyReview.pdf).
 The following section briefly explains the fucntions purpose and outputs but reader should refer to `doc/README.md` for detail [doucmentation](doc/README.md).
 
+A tutorial example is in `/scalos/sandbox/example` which is [here](/scalos/sandbox/example.ipyn) 
+
 ### Search / Lookup 
 This function allows user to input and look up configurations in the run logs and return test entires and run numbers correspoding to the inputs. 
 
