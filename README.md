@@ -1,5 +1,5 @@
-# <img src= "doc/picture/UW-S-20D_silhouette_top.png" height="60"></img> Supersonic Configuration At Low Speeds (SCALOS)
-
+# <img src= "doc/picture/UW-S-20D_silhouette_top.png" height="60"></img>Supersonic Configuration At Low Speeds (SCALOS)
+[![Python Package using Conda](https://github.com/eddiekyting/SCALOS/actions/workflows/python-package-conda.yml/badge.svg)](https://github.com/eddiekyting/SCALOS/actions/workflows/python-package-conda.yml)  [![Jekyll site CI](https://github.com/eddiekyting/SCALOS/actions/workflows/jekyll-docker.yml/badge.svg)](https://github.com/eddiekyting/SCALOS/actions/workflows/jekyll-docker.yml)  <br />
 This is a class project for CSE 583 at UW but will eventually be puslished for public use. 
 The goal of the project is to take the standard corrected Kirsten Wind Tunnel data for post process and data visualizatoin. 
 This project is by Kuang-Ying"Eddie" Ting, Xiaohai"Bob" Hu, and Yiju Hu. 
@@ -10,12 +10,21 @@ The goal of the SCALOS proejct is to study on how the shapes and configurations 
 Such configuration can become quite nonlinear aerodynamically at relatively low angles of attack. 
 In the design of such aircraft it is important to investigate this nonlinear behavior from a flight safety perspective. 
 Numerous wind tunnel tests and CFD simulations have been used to date and more are planned. 
-Methods of active control of such configuration, using a variety of control surfaces, canards, and engine control techniques, are being developed and evaluated. 
+Methods of active control of such configuration, using a variety of control surfaces, canards, and engine control techniques, are being developed and evaluated. Reference papers are linked below. 
+
+<img src= "doc/picture/DSS_all.png" ></img> 
+
+<img src= "doc/picture/Polar.png"></img> 
 
 ## Project Ojective 
 This project aims to analyze the experimental wind tunnel data for design space and trade-off study of supersonic airliner/ business jet at low speeds. 
 The goal of this class project is to extract the commercial wind tunnel standard corrected data for look-up/search, process, and visualization. 
 The future direction for this repository includes custom wind tunnel data corrections, model regressions, data reduction, and dynamic data augmentation. 
+The detailed project proposal could be found [here](doc/CSE583_ProjectProposal.pdf).
+
+### Target Users
+The target users are researches, engineers, and student who are interested in aerodynammic configuration of supersonic configuration desgin at low speeds. 
+The detailed target audiences description and user senario are [here](doc/Design.md).
 
 
 ### Package Capabilities
@@ -23,12 +32,15 @@ The package incldues the following capabilities.
 
     1. Search/Look up
     2. Data Process 
-        i. Data alignment 
-        ii. Data truncation 
-        iii. Data interpolation
-        iv. Data derivatives 
+        i. Data Extract
+        ii. Data Interpolation and Derivative
     3. Data visulization 
-    
+
+The choice of packages selections are decided in early phase of project during technology review which is documented [here](doc/CSE583_TechnologyReview.pdf).
+The following section briefly explains the fucntions purpose and outputs but reader should refer to `doc/README.md` for detail [doucmentation](doc/README.md).
+
+A tutorial example is in `/scalos/sandbox/example` which is [here](/scalos/sandbox/example.ipynb) 
+
 ### Search / Lookup 
 This function allows user to input and look up configurations in the run logs and return test entires and run numbers correspoding to the inputs. 
 
@@ -73,7 +85,9 @@ The modulated wind tunnel model components are tabualted below.
     CS              Clam shell speed brakes
     FTDXD           Forward trip dots (10 inch behind nose trip ring) 
 
-    
+### Data Extract 
+The data extract function allows user to input test entires and run number from search and look up and extract corresponding sub data set in data frame. 
+
 ### Data Process 
 The data process clean up the data for alignment, trucntion and intperolation. This function allows two different set of data with different length and with respect to different location to be manipulated for data process, i.e., subtraction, addition, derivatives, etc. 
 The derivative function computes the data derivaties with respect to longitudinal or lateral direction. 
@@ -85,36 +99,64 @@ The visulization allows user to visual the data and compare different set of dat
 The data structure of this project 
 
     .
+    ├── LICENSE
     ├── README.md
-    └── project
-        ├── CSE583 Project Proposal.pptx
-        ├── data
-        │   ├── finaldata_uw2298.csv
-        │   ├── finaldata_uw2320.csv
-        │   ├── finaldata_uw2326.csv
-        │   └── finaldata_uw2331.csv
-        ├── doc
-        │   └── Design.md
-        ├── ref
-        │   ├── 6.2022-1800.pdf
-        │   └── 6.2022-1803.pdf
-        ├── runlogs
-        │   ├── Autosort Run Log 2298.xlsx
-        │   ├── Autosort Run Log 2320.xlsx
-        │   ├── Autosort Run Log 2326.xlsx
-        │   └── Autosort Run Log 2331.xlsx
+    ├── data
+    │   ├── data.csv
+    │   ├── finaldata_uw2298.csv
+    │   ├── finaldata_uw2320.csv
+    │   ├── finaldata_uw2326.csv
+    │   ├── finaldata_uw2331.csv
+    │   └── runlogs
+    │       ├── autosort_runlog2298.xlsx
+    │       ├── autosort_runlog2320.xlsx
+    │       ├── autosort_runlog2326.xlsx
+    │       ├── autosort_runlog2331.xlsx
+    │       └── runlogs.csv
+    ├── doc
+    │   ├── CSE583_ProjectProposal.pdf
+    │   ├── CSE583_TechnologyReview.pdf
+    │   ├── Design.md
+    |   ├── README.md
+    │   └── picture
+    │       ├── UW-S-20B_silhouette_left.png
+    │       └── UW-S-20D_silhouette_top.png
+    ├── environment.yml
+    └── scalos
+        ├── __init__.py
         ├── sandbox
-        │   └── Extract_data.ipynb
+        │   ├── chart1.html
+        │   ├── chart_run2298.html
+        │   ├── script_development.ipynb
+        │   ├── script_test.ipynb
+        │   └── unit_test.ipynb
         ├── src
-        │   └── __init__.py
+        │   ├── __init__.py
+        │   ├── data_plot.py
+        │   ├── data_prep.py
+        │   ├── data_process.py
+        │   ├── runlog_search.py
+        │   └── user_input.py
         └── tests
-            └── __init__.py
+            ├── __init__.py
+            ├── test_data_cleanup.py
+            ├── test_data_extract.py
+            ├── test_data_interp_der.py
+            ├── test_data_plt.py
+            ├── test_runlog_cleanup.py
+            └── test_runlog_search.py
+        
+The `data` and its subfolder `runlogs` directories include experimental run logs and data sets from the KWT data (more data will be uploaded). 
+The data here is standard KWT corrected data without any custom corrections.
+The final data will be re-processed with final SCALOS-specific tare, intereferene and wall effects corrections. 
+The absolute levels of some paramters are expected to shift slightly, but this is note expected to  impact the comparative results and increments.
+The `ref` directory contains all the published literatures related to SCALOS's work at the University of Washington. 
+The `scalos` directory includes `src`, `tests`, and `sandbox` subfolders for modules, tests, and examples, respectively. 
+The `src` folder has modules of `search`, `data_prep`, `data_process`, and `data_plot` with corresponding unittests in `tests` folder.  
+The `sandbox` folder provides examples in Jupyter notebooks for new users. 
+The `doc` directory archieves all the documentation regarding this project.  
 
-The ''' data ''' and ''' runlogs''' directory includes experimental run logs and data sets from the KWT data (more data will be uploaded). 
-The data here is standard KWT corrected data without any custom corrections. 
-The ''' ref ''' directory contains all the published literatures related to SCALOS's work at the University of Washington. 
-The ''' src ''' directory has modules of ''' search ''', ''' data_prep ''', ''' data_process ''', and ''' data_plot ''' with corresponding unittests in '''tests''' folder.  
-The ''' examples ''' folder provides examples in Jupyter notebooks for new users. 
+
 
 ## Installation
 [1] Install the latest version of Anaconda for your system from [here](https://docs.anaconda.com/anaconda/install/). Please make sure to **install the Python 3.9 version**. The dependencies should also work for other Python versions. Project aim to support Linux and MacOS, so make sure you have access to a machine with either of these operating systems.
@@ -184,7 +226,33 @@ There are several entries for the KWT. Each entries contains a run log and a dat
     19. LOD:            Lift over drag, Nondimensional lift coeffeicetint divided by nondimensional drag coeffeicetint. 
 
 
+## Bug Report
+If you would like to report a bug or issue , please submit a detailed report at [this link](https://github.com/eddiekyting/SCALOS/issues/new).
+
+
+## Citing SCALOS
+
+If you use SCALOS in your research or wish to refer to the dataset published, please use the following BibTeX entry.
+
+```BibTeX
+ @article{ting_mavriplis_soltani_nelson_livne_2022, 
+ title=         {Supersonic configurations at low speeds (SCALOS): Model geometry and aerodynamic results}, 
+ DOI=           {10.2514/6.2022-1800}, 
+ journal=       {AIAA SCITECH 2022 Forum}, 
+ author=        {Ting, Kuang-Ying and Mavriplis, Nicolas and Soltani, Reza and Nelson, Chester P. and Livne, Eli}, 
+ year=          {2022}} 
+```
+
 ## Acknowledgement 
 Support by NASA, Award/Contract \#80NSSC19K1661, under the Commercial Supersonic Technology (CST) program, Supersonic Configurations at Low Speeds, with Sarah Langston as the NASA technical grant monitor is gratefully acknowledged. The authors would like to thank Peter Coen, Lori Ozoroski, Sriram Rallabhandi, Melissa Carter, and Sarah Langston from NASA for the opportunity to conduct this needed research for supersonic aircraft. The authors would also like to thank the staff and crew of the University of Washington’s Kirsten Wind Tunnel (KWT), the 2020-2022 UW senior capstone design project teams, Anwar Moustafa and Colton Hill from class 2021, and Josh Ignacio from class 2022 for their assistance and contributions.
 
 The authors would also like to thank Dr. David Beck and Erin Wilson from University of Washington for their support, guidance, and feedback in the development of this package.
+
+## References
+1. Nelson, C. P., Ting, K.-Y., Mavriplis, N., Soltani, R., and Livne, E., “Supersonic Configurations at LowSpeeds (SCALOS): Project Background and Progress atUniversity ofWashington,” AIAA Scitech 2022 Forum, 2022, p. 1803. https://doi.org/10.2514/6.2022-1803.
+2. Ting, K.-Y., Mavriplis, N., Soltani, R., Nelson, C., and Livne, E., “Supersonic Configurations at Low Speeds (SCALOS): Model Geometry and Aerodynamic Results,” AIAA Scitech 2022 Forum, 2022, p. 1800. https://doi.org/10.2514/6.2022-1800.
+3. Mavriplis, N., Ting, K.-Y., Moustafa, A., Hill, C., Soltani, R., Nelson, C., and Livne, E., “Supersonic Configurations at Low Speeds (SCALOS): Test / Simulation Correlation Studies,” AIAA Scitech 2022 Forum, 2022, p. 1801. https://doi.org/10.2514/6.2022-1801.
+4. Ting, K.-Y., Mavriplis, N., Soltani, R., Nelson, C. P., and Livne, E., “Supersonic Configurations at Low Speeds (SCALOS): The Aerodynamic Effects of Control Surfaces,” AIAA SciTech 2022 Forum, 2023. (Submitted on Dec 12, 2022).
+5. Ting, K.-Y., Mavriplis, N., Soltani, R., Nelson, C. P., and Livne, E., “Supersonic Configurations at Low Speeds (SCALOS): Longitudinal Aerodynamics: Configuration Variations and Control Surfaces Effects,” AIAA SciTech 2022 Forum, 2023. (Submitted on Dec 12, 2022).
+6. Mavriplis, N., Ting, K.-Y., Soltani, R., Nelson, C. P., and Livne, E., “Supersonic Configurations at Low Speeds (SCALOS): CFD Aid Data Reduction,” AIAA SciTech 2022 Forum, 2023. Abstract Accepted. (Submitted on Dec 12, 2022).
+7. Nelson, C. P., Ting, K.-Y., Ignacio, J. Mavriplis, N., Soltani, R., and Livne, E., “Supersonic Configurations at Low Speeds (SCALOS): Configuration Comparison of SCALOS to the Existing Designs,” AIAA SciTech 2023 Forum, 2023. (Submitted on Dec 12, 2022).
