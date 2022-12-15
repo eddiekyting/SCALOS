@@ -16,14 +16,6 @@ Methods of active control of such configuration, using a variety of control surf
 
 <img src= "doc/picture/Polar.png"></img> 
 
-1. Nelson, C. P., Ting, K.-Y., Mavriplis, N., Soltani, R., and Livne, E., “Supersonic Configurations at LowSpeeds (SCALOS): Project Background and Progress atUniversity ofWashington,” AIAA Scitech 2022 Forum, 2022, p. 1803. https://doi.org/10.2514/6.2022-1803.
-2. Ting, K.-Y., Mavriplis, N., Soltani, R., Nelson, C., and Livne, E., “Supersonic Configurations at Low Speeds (SCALOS): Model Geometry and Aerodynamic Results,” AIAA Scitech 2022 Forum, 2022, p. 1800. https://doi.org/10.2514/6.2022-1800.
-3. Mavriplis, N., Ting, K.-Y., Moustafa, A., Hill, C., Soltani, R., Nelson, C., and Livne, E., “Supersonic Configurations at Low Speeds (SCALOS): Test / Simulation Correlation Studies,” AIAA Scitech 2022 Forum, 2022, p. 1801. https://doi.org/10.2514/6.2022-1801.
-4. Ting, K.-Y., Mavriplis, N., Soltani, R., Nelson, C. P., and Livne, E., “Supersonic Configurations at Low Speeds (SCALOS): The Aerodynamic Effects of Control Surfaces,” AIAA SciTech 2022 Forum, 2023. (Submitted on Dec 12, 2022).
-5. Ting, K.-Y., Mavriplis, N., Soltani, R., Nelson, C. P., and Livne, E., “Supersonic Configurations at Low Speeds (SCALOS): Longitudinal Aerodynamics: Configuration Variations and Control Surfaces Effects,” AIAA SciTech 2022 Forum, 2023. (Submitted on Dec 12, 2022).
-6. Mavriplis, N., Ting, K.-Y., Soltani, R., Nelson, C. P., and Livne, E., “Supersonic Configurations at Low Speeds (SCALOS): CFD Aid Data Reduction,” AIAA SciTech 2022 Forum, 2023. Abstract Accepted. (Submitted on Dec 12, 2022).
-7. Nelson, C. P., Ting, K.-Y., Ignacio, J. Mavriplis, N., Soltani, R., and Livne, E., “Supersonic Configurations at Low Speeds (SCALOS): Configuration Comparison of SCALOS to the Existing Designs,” AIAA SciTech 2023 Forum, 2023. (Submitted on Dec 12, 2022).
-
 ## Project Ojective 
 This project aims to analyze the experimental wind tunnel data for design space and trade-off study of supersonic airliner/ business jet at low speeds. 
 The goal of this class project is to extract the commercial wind tunnel standard corrected data for look-up/search, process, and visualization. 
@@ -237,7 +229,30 @@ There are several entries for the KWT. Each entries contains a run log and a dat
 ## Bug Report
 If you would like to report a bug or issue , please submit a detailed report at [this link](https://github.com/eddiekyting/SCALOS/issues/new).
 
+
+## Citing SCALOS
+
+If you use SCALOS in your research or wish to refer to the dataset published, please use the following BibTeX entry.
+
+```BibTeX
+ @article{ting_mavriplis_soltani_nelson_livne_2022, 
+ title=         {Supersonic configurations at low speeds (SCALOS): Model geometry and aerodynamic results}, 
+ DOI=           {10.2514/6.2022-1800}, 
+ journal=       {AIAA SCITECH 2022 Forum}, 
+ author=        {Ting, Kuang-Ying and Mavriplis, Nicolas and Soltani, Reza and Nelson, Chester P. and Livne, Eli}, 
+ year=          {2022}} 
+```
+
 ## Acknowledgement 
 Support by NASA, Award/Contract \#80NSSC19K1661, under the Commercial Supersonic Technology (CST) program, Supersonic Configurations at Low Speeds, with Sarah Langston as the NASA technical grant monitor is gratefully acknowledged. The authors would like to thank Peter Coen, Lori Ozoroski, Sriram Rallabhandi, Melissa Carter, and Sarah Langston from NASA for the opportunity to conduct this needed research for supersonic aircraft. The authors would also like to thank the staff and crew of the University of Washington’s Kirsten Wind Tunnel (KWT), the 2020-2022 UW senior capstone design project teams, Anwar Moustafa and Colton Hill from class 2021, and Josh Ignacio from class 2022 for their assistance and contributions.
 
 The authors would also like to thank Dr. David Beck and Erin Wilson from University of Washington for their support, guidance, and feedback in the development of this package.
+
+## References
+1. Nelson, C. P., Ting, K.-Y., Mavriplis, N., Soltani, R., and Livne, E., “Supersonic Configurations at LowSpeeds (SCALOS): Project Background and Progress atUniversity ofWashington,” AIAA Scitech 2022 Forum, 2022, p. 1803. https://doi.org/10.2514/6.2022-1803.
+2. Ting, K.-Y., Mavriplis, N., Soltani, R., Nelson, C., and Livne, E., “Supersonic Configurations at Low Speeds (SCALOS): Model Geometry and Aerodynamic Results,” AIAA Scitech 2022 Forum, 2022, p. 1800. https://doi.org/10.2514/6.2022-1800.
+3. Mavriplis, N., Ting, K.-Y., Moustafa, A., Hill, C., Soltani, R., Nelson, C., and Livne, E., “Supersonic Configurations at Low Speeds (SCALOS): Test / Simulation Correlation Studies,” AIAA Scitech 2022 Forum, 2022, p. 1801. https://doi.org/10.2514/6.2022-1801.
+4. Ting, K.-Y., Mavriplis, N., Soltani, R., Nelson, C. P., and Livne, E., “Supersonic Configurations at Low Speeds (SCALOS): The Aerodynamic Effects of Control Surfaces,” AIAA SciTech 2022 Forum, 2023. (Submitted on Dec 12, 2022).
+5. Ting, K.-Y., Mavriplis, N., Soltani, R., Nelson, C. P., and Livne, E., “Supersonic Configurations at Low Speeds (SCALOS): Longitudinal Aerodynamics: Configuration Variations and Control Surfaces Effects,” AIAA SciTech 2022 Forum, 2023. (Submitted on Dec 12, 2022).
+6. Mavriplis, N., Ting, K.-Y., Soltani, R., Nelson, C. P., and Livne, E., “Supersonic Configurations at Low Speeds (SCALOS): CFD Aid Data Reduction,” AIAA SciTech 2022 Forum, 2023. Abstract Accepted. (Submitted on Dec 12, 2022).
+7. Nelson, C. P., Ting, K.-Y., Ignacio, J. Mavriplis, N., Soltani, R., and Livne, E., “Supersonic Configurations at Low Speeds (SCALOS): Configuration Comparison of SCALOS to the Existing Designs,” AIAA SciTech 2023 Forum, 2023. (Submitted on Dec 12, 2022).
