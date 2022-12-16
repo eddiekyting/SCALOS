@@ -10,7 +10,9 @@ def start():
     """
     Interact with users through command-line interface. User can choose
     among entering the configurations, seeing some configuration
-    examples, and quit.
+    examples, and quit.After entering the configuration, the function
+    can see whether we have this configuration in our dataset. If yes,
+    the function will also print the number of runs we have.
     """
     stop = False
     while not stop:
