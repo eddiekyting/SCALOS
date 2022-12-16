@@ -50,7 +50,8 @@ def start():
             print("Sorry, there is no relevant data! Try other configurations!")
             continue
         if stop is False:
-            print(test_list, run_num_list)
+            n_of_run = sum(len(i) for i in run_num_list)
+            print("Great! There are "+str(n_of_run)+" runs with the configuration "
+                                               "you entered in our dataset!")
 
-#if __name__ == "__main__":
-start()
+
