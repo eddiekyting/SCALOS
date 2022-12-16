@@ -14,7 +14,7 @@ command-line interface. User can choose among entering the configurations, seein
 configuration examples, and quit. 
 
 
-After entering the configuration, the function can see whether we have this configuration in
+After entering the configuration, the function will check whether we have this configuration in
 our dataset. If yes, the function will also print the number of runs we have. If no, users
 can try other configurations. 
 
