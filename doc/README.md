@@ -11,7 +11,10 @@ The modules and fucntions are in `src` directory.
 ## function: [start](../scalos/src/user_input.py)
 This function is the start point of our tool. With this function, users can interact through 
 command-line interface. User can choose among entering the configurations, seeing some 
-configuration examples, and quit.
+configuration examples, and quit. 
+After entering the configuration, the function can see whether we have this configuration in
+our dataset. If yes, the function will also print the number of runs we have. If no, users
+can try other configurations. 
 
 ## function: [search_configuration](../scalos/src/runlog_search.py)
 
